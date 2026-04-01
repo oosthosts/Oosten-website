@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="James D. Oosten, MD - Board-Eligible Orthopedic Surgeon specializing in Hand, Wrist, Forearm, Elbow, and Shoulder Surgery. Upper Extremity Specialist.">
-    <meta name="keywords" content="orthopedic surgeon, hand surgery, wrist surgery, elbow surgery, shoulder surgery, upper extremity, James Oosten MD">
-    <title>James D. Oosten, MD | Upper Extremity Orthopedic Surgery</title>
+    <meta name="description" content="James D. Oosten, MD - Board-Eligible Orthopaedic Surgeon specializing in Hand, Wrist, Forearm, Elbow, and Shoulder Surgery. Upper Extremity Specialist.">
+    <meta name="keywords" content="orthopaedic surgeon, hand surgery, wrist surgery, elbow surgery, shoulder surgery, upper extremity, James Oosten MD">
+    <title>James D. Oosten, MD | Upper Extremity Orthopaedic Surgery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,24 +17,31 @@
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">
-                <span class="logo-name">James D. Oosten, MD</span>
+                <span class="logo-name">JAMES D. OOSTEN, MD</span>
+                <span class="logo-subtitle">ORTHOPAEDIC SURGERY &nbsp;|&nbsp; HAND &nbsp;|&nbsp; WRIST &nbsp;|&nbsp; FOREARM &nbsp;|&nbsp; ELBOW &nbsp;|&nbsp; SHOULDER</span>
             </a>
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Conditions</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#philosophy" class="nav-link">Patient Philosophy</a></li>
-                <li><a href="#resources" class="nav-link">Patient Education</a></li>
-                <li><a href="#protocols" class="nav-link">Therapy Protocols</a></li>
-                <li><a href="#videos" class="nav-link">Videos</a></li>
-                <li><a href="#interests" class="nav-link">Beyond Medicine</a></li>
-                <li><a href="#disclosures" class="nav-link">Disclosures</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#about" class="nav-link">About &#9662;</a>
+                    <div class="dropdown-menu">
+                        <a href="#education" class="dropdown-link">Education</a>
+                        <a href="#research" class="dropdown-link">Research</a>
+                        <a href="#disclosures" class="dropdown-link">Disclosures</a>
+                        <a href="#beyond-medicine" class="dropdown-link">Beyond Medicine</a>
+                        <a href="#contact" class="dropdown-link">Contact Us</a>
+                    </div>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="#patient-care" class="nav-link">Patient Care &#9662;</a>
+                    <div class="dropdown-menu">
+                        <a href="#conditions" class="dropdown-link">Conditions Treated</a>
+                        <a href="#resources" class="dropdown-link">Patient Education</a>
+                        <a href="#protocols" class="dropdown-link">Therapy Protocols</a>
+                        <a href="#videos" class="dropdown-link">Videos</a>
+                        <a href="#locations" class="dropdown-link">Locations</a>
+                    </div>
+                </li>
             </ul>
         </div>
     </nav>
@@ -45,7 +52,7 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">James D. Oosten, MD</h1>
-                <p class="hero-subtitle">Upper Extremity Orthopedic Surgery</p>
+                <p class="hero-subtitle">Upper Extremity Orthopaedic Surgery</p>
                 <p class="hero-description">Specializing in Shoulder, Elbow, Forearm, Wrist &amp; Hand</p>
                 <div class="hero-cta">
                     <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -53,7 +60,6 @@
                 </div>
             </div>
             <div class="hero-image">
-                <!-- Replace src with your professional headshot -->
                 <img src="images/headshot.jpg" alt="Dr. James D. Oosten, MD" class="headshot" id="heroPhoto">
                 <div class="headshot-placeholder" id="photoPlaceholder">
                     <i class="fas fa-user-md"></i>
@@ -74,7 +80,7 @@
         </div>
     </section>
 
-    <!-- Affiliations Banner (inspired by Raji/Nicolay credential displays) -->
+    <!-- Affiliations Banner -->
     <section class="affiliations-banner">
         <div class="container">
             <div class="affiliations-row">
@@ -84,8 +90,6 @@
                 <span class="affiliation-badge">ORS</span>
                 <span class="affiliation-badge">AOSSM</span>
                 <span class="affiliation-badge">A&Omega;A</span>
-                <!-- EDIT: Replace text badges with logo images when available -->
-                <!-- <img src="images/logos/assh.png" alt="ASSH" class="affiliation-logo"> -->
             </div>
         </div>
     </section>
@@ -95,10 +99,10 @@
         <div class="container">
             <h2 class="section-title">About Dr. Oosten</h2>
             <div class="about-content">
-                <p>Dr. James D. Oosten is an orthopedic surgeon specializing in conditions of the hand, wrist, forearm, elbow, and shoulder. With a foundation in bioengineering and biomechanics from the University of Pittsburgh and his medical degree from The Ohio State University College of Medicine, Dr. Oosten brings a unique engineering-informed perspective to upper extremity surgery.</p>
-                <p>One thing Dr. Oosten will never take for granted is the opportunity granted to him by his childhood orthopedic surgeons. Born with severely deformed bilateral clubfoot, he spent considerable time with orthopedic providers throughout his youth &mdash; an experience that sparked a lifelong fascination with musculoskeletal anatomy and the field of orthopedic biomechanics. Coupled with a passion for working with his hands developed through DIY projects and engineering, he became set on a career in orthopedic surgery from an early age.</p>
-                <p>His practice encompasses the full spectrum of upper extremity conditions, from acute traumatic injuries such as fractures and tendon lacerations to chronic conditions including arthritis, nerve compression, and complex reconstructive cases. Dr. Oosten is committed to providing expert, compassionate surgical care to help patients restore function and return to the activities they love.</p>
-                <p>As a researcher with publications in sports medicine, hand surgery, biomechanics, and basic science, Dr. Oosten believes that a firm understanding of the science governing implant and repair stability can help optimize orthopedic interventions and improve treatment outcomes.</p>
+                <p>Dr. James D. Oosten is an orthopaedic surgeon specializing in conditions of the hand, wrist, forearm, elbow, and shoulder. With a foundation in bioengineering and biomechanics from the University of Pittsburgh and his medical degree from The Ohio State University College of Medicine, and his own experiences as a patient, Dr. Oosten brings a unique perspective that helps him treat your conditions in a way that is specific to you and your needs.</p>
+                <p>One thing Dr. Oosten will never take for granted is the opportunity granted to him by his childhood orthopedic surgeons. Born with severe clubfoot, he spent considerable time with orthopedic providers throughout his youth &mdash; an experience that sparked a lifelong fascination with musculoskeletal anatomy and the field of orthopedic biomechanics. Coupled with a passion for working with his hands developed through DIY projects and engineering, he became set on a career in orthopedic surgery from an early age.</p>
+                <p>His practice encompasses the full spectrum of upper extremity conditions, from acute traumatic injuries such as fractures and tendon injuries to chronic conditions including arthritis, nerve compression, and complex reconstructive cases. Dr. Oosten is committed to providing expert, compassionate surgical care to help patients restore function and return to the activities they love.</p>
+                <p>As a researcher with publications in hand and upper extremity surgery, trauma, sports medicine, spine surgery, biomechanics, and basic science, Dr. Oosten believes that a firm understanding of the science governing the procedures we do can help optimize treatment outcomes. He is also committed to using his engineering background to advance the field of Orthopaedic Surgery by improving surgical devices and items used in nonsurgical or postoperative care of patients.</p>
             </div>
             <div style="text-align:center;margin-top:32px;">
                 <a href="documents/Oosten_CV_2026.pdf" class="btn btn-primary" download>
@@ -108,88 +112,15 @@
         </div>
     </section>
 
-    <!-- Conditions & Services (inspired by Raji's specialty cards and Nicolay's joint focus areas) -->
-    <section class="section section-alt" id="services">
-        <div class="container">
-            <h2 class="section-title">Conditions Treated</h2>
-            <p class="section-intro">Comprehensive surgical and non-surgical care for the entire upper extremity.</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fas fa-hand"></i>
-                    <h3>Hand &amp; Fingers</h3>
-                    <ul>
-                        <li>Trigger finger</li>
-                        <li>Dupuytren's contracture</li>
-                        <li>Tendon injuries (flexor &amp; extensor)</li>
-                        <li>Fractures &amp; dislocations</li>
-                        <li>Thumb arthritis</li>
-                        <li>Ganglion cysts</li>
-                        <li>Infections</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-hand-holding-medical"></i>
-                    <h3>Wrist</h3>
-                    <ul>
-                        <li>Distal radius fractures</li>
-                        <li>Scaphoid fractures</li>
-                        <li>TFCC injuries</li>
-                        <li>Wrist arthritis &amp; fusion</li>
-                        <li>Carpal tunnel syndrome</li>
-                        <li>De Quervain's tenosynovitis</li>
-                        <li>Ganglion cysts</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-bone"></i>
-                    <h3>Elbow</h3>
-                    <ul>
-                        <li>Tennis &amp; golfer's elbow</li>
-                        <li>Cubital tunnel syndrome</li>
-                        <li>Elbow fractures</li>
-                        <li>Elbow stiffness &amp; contracture</li>
-                        <li>Distal biceps rupture</li>
-                        <li>Elbow arthroscopy</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-hand-fist"></i>
-                    <h3>Shoulder</h3>
-                    <ul>
-                        <li>Rotator cuff repair</li>
-                        <li>Shoulder instability &amp; labral repair</li>
-                        <li>Shoulder replacement (anatomic &amp; reverse)</li>
-                        <li>Frozen shoulder</li>
-                        <li>Clavicle &amp; proximal humerus fractures</li>
-                        <li>AC joint reconstruction</li>
-                        <li>Biceps tenodesis</li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <i class="fas fa-circle-nodes"></i>
-                    <h3>Nerve &amp; Microsurgery</h3>
-                    <ul>
-                        <li>Carpal tunnel release</li>
-                        <li>Cubital tunnel release</li>
-                        <li>Nerve repair &amp; grafting</li>
-                        <li>Nerve transfers</li>
-                        <li>Brachial plexus injuries</li>
-                        <li>Replantation &amp; flap coverage</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Education & Training Section -->
-    <section class="section" id="education">
+    <section class="section section-alt" id="education">
         <div class="container">
             <h2 class="section-title">Education &amp; Training</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Orthopedic Surgery Residency</h3>
+                        <h3>Orthopaedic Surgery Residency <span class="inst-badge inst-badge-uic">UIC</span></h3>
                         <p class="timeline-institution">University of Illinois at Chicago &mdash; Department of Orthopaedic Surgery</p>
                         <p class="timeline-year">2023 &ndash; 2028 (Class of 2028)</p>
                         <p style="font-size:0.9rem;color:var(--color-text-light);margin-top:4px;">OITE Exam: 94th Percentile &bull; Appointed Class Representative &bull; Illinois State Resident Representative (NOLC)</p>
@@ -198,7 +129,7 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Doctor of Medicine (MD)</h3>
+                        <h3>Doctor of Medicine (MD) <span class="inst-badge inst-badge-osu">OSU</span></h3>
                         <p class="timeline-institution">The Ohio State University College of Medicine</p>
                         <p class="timeline-year">2019 &ndash; 2023</p>
                         <p style="font-size:0.9rem;color:var(--color-text-light);margin-top:4px;">Cum Laude &bull; Alpha Omega Alpha Honor Society &bull; Landacre Research Honor Society</p>
@@ -207,7 +138,7 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <h3>Bachelor of Science in Bioengineering</h3>
+                        <h3>Bachelor of Science in Bioengineering <span class="inst-badge inst-badge-pitt">PITT</span></h3>
                         <p class="timeline-institution">University of Pittsburgh &mdash; Swanson School of Engineering</p>
                         <p class="timeline-year">2014 &ndash; 2018</p>
                         <p style="font-size:0.9rem;color:var(--color-text-light);margin-top:4px;">Summa cum Laude &bull; Concentration: Biomechanics &amp; Biodynamics &bull; Minor: Chemistry &bull; Outstanding Biomechanics Student of the Year &bull; Honors College Scholar</p>
@@ -231,10 +162,10 @@
     </section>
 
     <!-- Research Section -->
-    <section class="section section-alt" id="research">
+    <section class="section" id="research">
         <div class="container">
             <h2 class="section-title">Research &amp; Publications</h2>
-            <p class="section-intro">Dr. Oosten is committed to advancing the field of upper extremity surgery through clinical research and academic contributions.</p>
+            <p class="section-intro">Dr. Oosten is committed to advancing the field of Orthopaedic Surgery through his academic contributions, which include publications in numerous high-impact peer reviewed journals, instructional lectures, and book Chapters.</p>
 
             <div class="research-categories">
                 <div class="research-category">
@@ -278,10 +209,12 @@
         </div>
     </section>
 
-    <!-- Patient Philosophy Section -->
-    <section class="section" id="philosophy">
+    <!-- Patient Care Section -->
+    <section class="section section-alt" id="patient-care">
         <div class="container">
-            <h2 class="section-title">Patient Experience Philosophy</h2>
+            <h2 class="section-title">Patient Care</h2>
+
+            <!-- Philosophy content -->
             <div class="philosophy-content">
                 <div class="philosophy-quote">
                     <i class="fas fa-quote-left"></i>
@@ -309,44 +242,151 @@
                         <p>Optimal outcomes require teamwork. I work closely with hand therapists, rehabilitation specialists, and your primary care team to support your complete recovery.</p>
                     </div>
                 </div>
-                <!-- EDIT: Customize your philosophy further -->
+            </div>
 
-                <!-- Patient Testimonials (inspired by nicolaymd.com) -->
-                <div class="testimonials-grid">
-                    <!-- EDIT: Add real patient testimonials when available -->
-                    <div class="testimonial-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <blockquote>Patient testimonial placeholder. Replace with real reviews from Healthgrades, Google, or patient feedback.</blockquote>
-                        <cite>&mdash; Patient Name, Source</cite>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <blockquote>Patient testimonial placeholder. Replace with real reviews.</blockquote>
-                        <cite>&mdash; Patient Name, Source</cite>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                        <blockquote>Patient testimonial placeholder. Replace with real reviews.</blockquote>
-                        <cite>&mdash; Patient Name, Source</cite>
-                    </div>
+            <!-- Languages note -->
+            <div class="languages-note">
+                <i class="fas fa-language"></i>
+                <p><strong>Languages:</strong> English &middot; Spanish &middot; Other languages available upon request</p>
+            </div>
+
+            <!-- Explore Patient Care cards -->
+            <div class="care-cards">
+                <a href="#conditions" class="care-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <span>Conditions Treated</span>
+                </a>
+                <a href="#resources" class="care-card">
+                    <i class="fas fa-file-medical"></i>
+                    <span>Patient Education</span>
+                </a>
+                <a href="#protocols" class="care-card">
+                    <i class="fas fa-clipboard-list"></i>
+                    <span>Therapy Protocols</span>
+                </a>
+                <a href="#videos" class="care-card">
+                    <i class="fas fa-video"></i>
+                    <span>Videos</span>
+                </a>
+                <a href="#locations" class="care-card">
+                    <i class="fas fa-location-dot"></i>
+                    <span>Locations</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conditions Treated Section -->
+    <section class="section" id="conditions">
+        <div class="container">
+            <h2 class="section-title">Conditions Treated</h2>
+            <p class="section-intro">Comprehensive surgical and non-surgical care for the entire upper extremity.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-hand"></i>
+                    <h3>Hand &amp; Fingers</h3>
+                    <ul>
+                        <li>Trigger finger</li>
+                        <li>Dupuytren's contracture</li>
+                        <li>Tendon injuries (flexor &amp; extensor)</li>
+                        <li>Fractures &amp; dislocations</li>
+                        <li>Thumb arthritis</li>
+                        <li>Ganglion cysts &amp; other masses</li>
+                        <li>Infections</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <span class="svc-icon-svg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M9 2 Q8.5 9 9.5 13"/><path d="M15 2 Q15.5 9 14.5 13"/><line x1="7" y1="13" x2="17" y2="13"/><rect x="7" y="14.5" width="4" height="3" rx="1"/><rect x="13" y="14.5" width="4" height="3" rx="1"/><rect x="7" y="18.5" width="4" height="3" rx="1"/><rect x="13" y="18.5" width="4" height="3" rx="1"/></svg>
+                    </span>
+                    <h3>Wrist</h3>
+                    <ul>
+                        <li>Distal radius fractures</li>
+                        <li>Scaphoid fractures</li>
+                        <li>TFCC injuries</li>
+                        <li>Wrist arthritis &amp; fusion</li>
+                        <li>Wrist arthroscopy</li>
+                        <li>Carpal tunnel syndrome</li>
+                        <li>De Quervain's tenosynovitis</li>
+                        <li>Ganglion cysts</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <span class="svc-icon-svg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M12 2 L12 12"/><circle cx="12" cy="14" r="3.5"/><path d="M14.8 16.4 L21 20"/></svg>
+                    </span>
+                    <h3>Elbow</h3>
+                    <ul>
+                        <li>Tennis &amp; golfer's elbow</li>
+                        <li>Cubital tunnel syndrome</li>
+                        <li>Elbow fractures</li>
+                        <li>Elbow stiffness &amp; contracture</li>
+                        <li>Distal biceps rupture</li>
+                        <li>Elbow arthroscopy</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <span class="svc-icon-svg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="32" height="32"><path d="M8 21 Q4 13 8 5"/><circle cx="15" cy="13" r="6"/><line x1="15" y1="19" x2="15" y2="24"/></svg>
+                    </span>
+                    <h3>Shoulder</h3>
+                    <ul>
+                        <li>Shoulder replacement (anatomic &amp; reverse)</li>
+                        <li>Rotator cuff repair</li>
+                        <li>Shoulder instability &amp; labral repair</li>
+                        <li>Frozen shoulder</li>
+                        <li>Clavicle &amp; proximal humerus fractures</li>
+                        <li>AC joint reconstruction</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Nerve &amp; Microsurgery</h3>
+                    <ul>
+                        <li>Nerve release procedures</li>
+                        <li>Nerve repair, grafting &amp; transfers</li>
+                        <li>Tendon transfers</li>
+                        <li>Brachial plexus injuries</li>
+                        <li>Replantation &amp; flap coverage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="section section-alt" id="locations">
+        <div class="container">
+            <h2 class="section-title">Locations</h2>
+            <div class="locations-content">
+                <p>Dr. Oosten is currently in residency at the University of Illinois in Chicago, IL.</p>
+                <ul class="locations-list">
+                    <li>University of Illinois Health System hospitals</li>
+                    <li>Advocate Lutheran General and Christ Medical Center</li>
+                    <li>Shriners Hospital</li>
+                    <li>Endeavor Health / Northshore University Health System</li>
+                </ul>
+                <div class="locations-global">
+                    <i class="fas fa-globe"></i>
+                    <p>Dr. Oosten has also traveled to the Rep&uacute;blica Dominicana to perform surgical procedures and run musculoskeletal health clinics with Community Empowerment.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Patient Education Section -->
-    <section class="section section-alt" id="resources">
+    <section class="section" id="resources">
         <div class="container">
             <h2 class="section-title">Patient Education</h2>
             <p class="section-intro">Educational materials to help you understand your condition, treatment options, and what to expect before and after surgery.</p>
 
             <div class="resource-filter">
                 <button class="filter-btn active" data-filter="all">All Topics</button>
-                <button class="filter-btn" data-filter="shoulder">Shoulder</button>
-                <button class="filter-btn" data-filter="hand">Hand &amp; Fingers</button>
-                <button class="filter-btn" data-filter="wrist">Wrist</button>
-                <button class="filter-btn" data-filter="elbow">Elbow</button>
-                <button class="filter-btn" data-filter="nerve">Nerve</button>
+                <button class="filter-btn" data-filter="shoulder"><i class="fas fa-person-walking"></i> Shoulder</button>
+                <button class="filter-btn" data-filter="hand"><i class="fas fa-hand"></i> Hand &amp; Fingers</button>
+                <button class="filter-btn" data-filter="wrist"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 2 Q8.5 9 9.5 13"/><path d="M15 2 Q15.5 9 14.5 13"/><line x1="7" y1="13" x2="17" y2="13"/><rect x="7" y="14.5" width="4" height="3" rx="1"/><rect x="13" y="14.5" width="4" height="3" rx="1"/><rect x="7" y="18.5" width="4" height="3" rx="1"/><rect x="13" y="18.5" width="4" height="3" rx="1"/></svg></span> Forearm &amp; Wrist</button>
+                <button class="filter-btn" data-filter="elbow"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2 L12 12"/><circle cx="12" cy="14" r="3.5"/><path d="M14.8 16.4 L21 20"/></svg></span> Elbow</button>
+                <button class="filter-btn" data-filter="nerve"><i class="fas fa-microscope"></i> Nerve</button>
             </div>
 
             <div class="resources-grid" id="resourcesGrid">
@@ -354,21 +394,22 @@
             </div>
 
             <p class="resources-note"><em>These materials are for educational purposes and supplement, but do not replace, the personalized guidance from your surgeon and therapy team.</em></p>
+            <p class="resources-disclaimer"><strong>Disclaimer:</strong> The documents and rehabilitation information provided on this website are intended solely for patients currently under the care of Dr. Oosten. This content is meant to complement, not replace, professional medical advice, diagnosis, or treatment. As always, seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition or treatment. Do not disregard or delay professional medical advice based on information from this website.</p>
         </div>
     </section>
 
     <!-- Therapy Protocols Section -->
-    <section class="section" id="protocols">
+    <section class="section section-alt" id="protocols">
         <div class="container">
             <h2 class="section-title">Therapy Protocols</h2>
             <p class="section-intro">Post-operative rehabilitation protocols and non-operative exercise programs for your physical or hand therapist.</p>
 
             <div class="resource-filter">
                 <button class="filter-btn active" data-filter="all" data-target="protocolsGrid">All Protocols</button>
-                <button class="filter-btn" data-filter="shoulder-proto" data-target="protocolsGrid">Shoulder</button>
-                <button class="filter-btn" data-filter="elbow-proto" data-target="protocolsGrid">Elbow</button>
-                <button class="filter-btn" data-filter="hand-proto" data-target="protocolsGrid">Hand &amp; Wrist</button>
-                <button class="filter-btn" data-filter="nonop" data-target="protocolsGrid">Non-Operative Programs</button>
+                <button class="filter-btn" data-filter="shoulder-proto" data-target="protocolsGrid"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M8 21 Q4 13 8 5"/><circle cx="15" cy="13" r="6"/><line x1="15" y1="19" x2="15" y2="24"/></svg></span> Shoulder</button>
+                <button class="filter-btn" data-filter="elbow-proto" data-target="protocolsGrid"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2 L12 12"/><circle cx="12" cy="14" r="3.5"/><path d="M14.8 16.4 L21 20"/></svg></span> Elbow</button>
+                <button class="filter-btn" data-filter="hand-proto" data-target="protocolsGrid"><i class="fas fa-hand"></i> Hand, Forearm &amp; Wrist</button>
+                <button class="filter-btn" data-filter="nonop" data-target="protocolsGrid"><i class="fas fa-leaf"></i> Non-Operative Programs</button>
             </div>
 
             <div class="resources-grid" id="protocolsGrid">
@@ -380,7 +421,7 @@
     </section>
 
     <!-- Videos Section -->
-    <section class="section section-alt" id="videos">
+    <section class="section" id="videos">
         <div class="container">
             <h2 class="section-title">Educational Videos</h2>
             <p class="section-intro">Patient education presentations and surgical technique demonstrations.</p>
@@ -396,16 +437,21 @@
     </section>
 
     <!-- Beyond Medicine Section -->
-    <section class="section" id="interests">
+    <section class="section section-alt" id="beyond-medicine">
         <div class="container">
             <h2 class="section-title">Beyond Medicine</h2>
             <div class="interests-content">
                 <p>Outside of the operating room, Dr. Oosten is passionate about:</p>
                 <div class="interests-grid">
                     <div class="interest-card">
+                        <i class="fas fa-house-heart"></i>
+                        <h3>Family</h3>
+                        <p>A proud brother and uncle, Dr. Oosten cherishes family game nights, outdoor activities together, and workouts at the family-owned JACKEDNLEEN Gym.</p>
+                    </div>
+                    <div class="interest-card">
                         <i class="fas fa-dumbbell"></i>
                         <h3>Fitness &amp; Nutrition</h3>
-                        <p>Dedicated to wellness with 5x/week workouts, daily cooking, and a background hosting a nutrition podcast (Bite-Sized Medicine). Helped build the JACKEDNLEEN Gym.</p>
+                        <p>Dedicated to wellness through a combination of gym workouts, healthy meal preparation, and I even hosted a nutrition podcast in medical school.</p>
                     </div>
                     <div class="interest-card">
                         <i class="fas fa-mountain"></i>
@@ -438,7 +484,7 @@
     </section>
 
     <!-- Disclosures Section -->
-    <section class="section section-alt" id="disclosures">
+    <section class="section" id="disclosures">
         <div class="container">
             <h2 class="section-title">Disclosures</h2>
             <div class="disclosures-content">
@@ -453,7 +499,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contact">
+    <section class="section section-alt" id="contact">
         <div class="container">
             <h2 class="section-title">Contact</h2>
             <div class="contact-content">
@@ -472,7 +518,6 @@
                             <a href="https://jamesoostenmd.com">jamesoostenmd.com</a>
                         </div>
                     </div>
-                    <!-- EDIT: Add phone, office address when available -->
                 </div>
                 <div class="contact-social">
                     <h3>Connect With Me</h3>
@@ -492,12 +537,69 @@
         </div>
     </section>
 
+    <!-- Professional Associations Ribbon -->
+    <section class="associations-ribbon">
+        <div class="container">
+            <p class="ribbon-section-label">Professional Memberships</p>
+            <div class="ribbon-track">
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr">AAOS</span>
+                    <span class="ribbon-org">American Academy of Orthopaedic Surgeons</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr">ASSH</span>
+                    <span class="ribbon-org">American Society for Surgery of the Hand</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr">AAHS</span>
+                    <span class="ribbon-org">American Association for Hand Surgery</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr">ASES</span>
+                    <span class="ribbon-org">American Shoulder and Elbow Surgeons</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr">AANA</span>
+                    <span class="ribbon-org">Arthroscopy Association of North America</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr">AOA</span>
+                    <span class="ribbon-org">American Orthopaedic Association</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr">ORS</span>
+                    <span class="ribbon-org">Orthopaedic Research Society</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr">AOSSM</span>
+                    <span class="ribbon-org">American Orthopaedic Society for Sports Medicine</span>
+                </div>
+            </div>
+            <div class="ribbon-divider"></div>
+            <p class="ribbon-section-label">Training Institutions</p>
+            <div class="ribbon-track">
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr ribbon-abbr-uic">UIC</span>
+                    <span class="ribbon-org">University of Illinois at Chicago</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr ribbon-abbr-osu">OSU</span>
+                    <span class="ribbon-org">The Ohio State University</span>
+                </div>
+                <div class="ribbon-item">
+                    <span class="ribbon-abbr ribbon-abbr-pitt">PITT</span>
+                    <span class="ribbon-org">University of Pittsburgh</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <p class="footer-name">James D. Oosten, MD</p>
-                <p class="footer-specialty">Upper Extremity Orthopedic Surgery</p>
+                <p class="footer-specialty">Upper Extremity Orthopaedic Surgery</p>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/in/james-oosten" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/jamesoosten" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>

@@ -108,7 +108,7 @@ const PROTOCOLS = [
       description: "Mound throwing program progressing to competitive pitching.",
       file: "therapy-protocols/Elbow-Throwing-Program-Phase2.docx" },
 
-    // --- HAND & WRIST POSTOPERATIVE PROTOCOLS ---
+    // --- HAND, FOREARM & WRIST POSTOPERATIVE PROTOCOLS ---
     { title: "Flexor Tendon Repair Protocol", category: "hand-proto",
       description: "Early protected motion protocol for flexor tendon repair with dorsal blocking splint and phased progression.",
       file: "therapy-protocols/Hand-Flexor-Tendon-Repair-Protocol.docx" },
@@ -148,6 +148,15 @@ const PROTOCOLS = [
     { title: "De Quervain's Release Protocol", category: "hand-proto",
       description: "First dorsal compartment release rehab with early thumb/wrist motion.",
       file: "therapy-protocols/Hand-DeQuervains-Release-Protocol.docx" },
+    { title: "Radial Nerve Tendon Transfer Protocol", category: "hand-proto",
+      description: "Postoperative rehabilitation protocol following tendon transfer for radial nerve palsy — addresses wrist extension, finger extension, and thumb extension restoration.",
+      file: "therapy-protocols/Hand-Tendon-Transfer-Radial-Nerve.docx" },
+    { title: "Median Nerve Tendon Transfer Protocol", category: "hand-proto",
+      description: "Postoperative rehabilitation protocol following tendon transfer for median nerve palsy — addresses thumb opposition and intrinsic function restoration.",
+      file: "therapy-protocols/Hand-Tendon-Transfer-Median-Nerve.docx" },
+    { title: "Ulnar Nerve Tendon Transfer Protocol", category: "hand-proto",
+      description: "Postoperative rehabilitation protocol following tendon transfer for ulnar nerve palsy — addresses intrinsic muscle function, claw deformity correction, and grip restoration.",
+      file: "therapy-protocols/Hand-Tendon-Transfer-Ulnar-Nerve.docx" },
 
     // --- NON-OPERATIVE PROGRAMS ---
     { title: "Shoulder Impingement & Rotator Cuff Tendonitis", category: "nonop",
@@ -162,6 +171,18 @@ const PROTOCOLS = [
     { title: "Elbow Stiffness Home Exercise Program", category: "nonop",
       description: "Low-load prolonged stretching program for elbow stiffness following injury or surgery.",
       file: "therapy-protocols/NonOp-Elbow-Stiffness-Home.docx" },
+    { title: "Carpal Tunnel Nerve Gliding Exercises", category: "nonop",
+      description: "Non-operative nerve gliding exercise program for carpal tunnel syndrome to improve median nerve mobility and reduce symptoms.",
+      file: "therapy-protocols/NonOp-Nerve-Gliding-Carpal-Tunnel.docx" },
+    { title: "Cubital Tunnel Nerve Gliding Exercises", category: "nonop",
+      description: "Non-operative nerve gliding exercise program for cubital tunnel syndrome to improve ulnar nerve mobility and reduce symptoms.",
+      file: "therapy-protocols/NonOp-Nerve-Gliding-Cubital-Tunnel.docx" },
+    { title: "Ulnar-Sided Wrist Pain Program", category: "nonop",
+      description: "Non-operative home exercise and activity modification program for ulnar-sided wrist pain including TFCC-related symptoms.",
+      file: "therapy-protocols/NonOp-Ulnar-Wrist-Pain.docx" },
+    { title: "Finger Stiffness Home Exercise Program", category: "nonop",
+      description: "Non-operative home exercise program for finger stiffness with progressive range of motion and blocking exercises.",
+      file: "therapy-protocols/NonOp-Finger-Stiffness.docx" },
 ];
 
 /**
@@ -176,7 +197,7 @@ function renderProtocols() {
     const tagLabels = {
         'shoulder-proto': 'Shoulder',
         'elbow-proto': 'Elbow',
-        'hand-proto': 'Hand & Wrist',
+        'hand-proto': 'Hand, Forearm & Wrist',
         'nonop': 'Non-Operative',
     };
 

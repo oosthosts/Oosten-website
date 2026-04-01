@@ -211,7 +211,7 @@ function renderResources() {
         const tagLabels = {
             shoulder: 'Shoulder',
             hand: 'Hand & Fingers',
-            wrist: 'Wrist',
+            wrist: 'Forearm & Wrist',
             elbow: 'Elbow',
             nerve: 'Nerve',
             general: 'General'
