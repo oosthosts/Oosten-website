@@ -1,0 +1,112 @@
+/* ============================================================================
+   POST-OP CARE NAVIGATOR  —  stylesheet
+   ----------------------------------------------------------------------------
+   Every class is namespaced `pon-` so this can drop into any site without
+   colliding with existing styles.
+
+   THEMING: override any --pon-* variable in your own CSS *after* loading this
+   file. The defaults below fall back to the host site's variables when they
+   exist (e.g. --color-primary), so on jamesoostenmd.com it inherits the site
+   palette automatically with zero configuration.
+   ========================================================================== */
+
+.pon {
+  /* Colour ---------------------------------------------------------------- */
+  --pon-primary:      var(--color-primary,      #1a3a5c);
+  --pon-primary-lt:   var(--color-primary-light,#2a5a8c);
+  --pon-accent:       var(--color-accent,       #3d8eb9);
+  --pon-gold:         var(--color-gold,         #c9a84c);
+  --pon-danger:       #c0392b;
+  --pon-success:      var(--color-success,      #27ae60);
+  --pon-warn:         #e67e22;
+  --pon-bg:           var(--color-bg,           #ffffff);
+  --pon-bg-alt:       var(--color-bg-alt,       #f5f7fa);
+  --pon-text:         var(--color-text,         #2c3e50);
+  --pon-text-lt:      var(--color-text-light,   #6c7a89);
+  --pon-border:       var(--color-border,       #e0e4e8);
+
+  /* Type ------------------------------------------------------------------ */
+  --pon-font-head: var(--font-heading, 'Playfair Display', Georgia, serif);
+  --pon-font-body: var(--font-body, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+
+  /* Shape ----------------------------------------------------------------- */
+  --pon-radius:    12px;
+  --pon-radius-sm: 6px;
+  --pon-shadow:    0 8px 30px rgba(0,0,0,.12);
+  --pon-shadow-sm: 0 4px 12px rgba(0,0,0,.1);
+
+  font-family: var(--pon-font-body);
+  color: var(--pon-text);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+.pon *, .pon *::before, .pon *::after { box-sizing: inherit; }
+
+/* ---------- shell ---------- */
+.pon-shell{background:var(--pon-bg);border-radius:var(--pon-radius);box-shadow:var(--pon-shadow);overflow:hidden;border:1px solid var(--pon-border);max-width:1000px;margin:0 auto}
+.pon-head{background:linear-gradient(135deg,var(--pon-primary),var(--pon-primary-lt));color:#fff;padding:26px 30px}
+.pon-head h3{color:#fff;font-family:var(--pon-font-head);font-size:1.4rem;margin:0 0 5px;line-height:1.25}
+.pon-head p{font-size:.9rem;opacity:.86;margin:0}
+.pon-body{padding:30px}
+
+/* ---------- steps ---------- */
+.pon-step{margin-bottom:26px}
+.pon-step-label{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:var(--pon-gold);font-weight:700;margin:0 0 11px;display:flex;align-items:center;gap:9px}
+.pon-num{background:var(--pon-primary);color:#fff;width:21px;height:21px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;flex-shrink:0}
+.pon-opts{display:flex;gap:12px;flex-wrap:wrap}
+.pon-opt{flex:1;min-width:186px;background:var(--pon-bg-alt);border:2px solid var(--pon-border);border-radius:var(--pon-radius-sm);padding:15px 17px;cursor:pointer;transition:.25s ease;text-align:left;font-family:var(--pon-font-body);font-size:.9rem;color:var(--pon-text)}
+.pon-opt:hover{border-color:var(--pon-accent);background:var(--pon-bg)}
+.pon-opt[aria-pressed="true"]{border-color:var(--pon-primary);background:var(--pon-primary);color:#fff;box-shadow:var(--pon-shadow-sm)}
+.pon-opt strong{display:block;font-size:.97rem;margin-bottom:3px;font-weight:600}
+.pon-opt span{font-size:.78rem;opacity:.78;display:block;line-height:1.45}
+
+/* ---------- day slider ---------- */
+.pon-slider-wrap{background:var(--pon-bg-alt);border-radius:var(--pon-radius-sm);padding:20px 22px;border:1px solid var(--pon-border)}
+.pon-slider-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:13px;gap:12px}
+.pon-day{font-family:var(--pon-font-head);font-size:1.55rem;color:var(--pon-primary);font-weight:600}
+.pon-phase{font-size:.78rem;color:#fff;background:var(--pon-accent);padding:4px 12px;border-radius:100px;font-weight:600;white-space:nowrap}
+.pon-slider-wrap input[type=range]{width:100%;accent-color:var(--pon-primary);height:6px;cursor:pointer}
+.pon-ticks{display:flex;justify-content:space-between;font-size:.7rem;color:var(--pon-text-lt);margin-top:7px}
+
+/* ---------- result cards ---------- */
+.pon-results{border-top:2px solid var(--pon-border);padding-top:26px;margin-top:8px}
+.pon-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(272px,1fr));gap:16px}
+.pon-card{background:var(--pon-bg-alt);border-radius:var(--pon-radius-sm);padding:20px;border-left:4px solid var(--pon-accent)}
+.pon-card h4{font-size:.95rem;margin:0 0 11px;display:flex;align-items:center;gap:9px;color:var(--pon-primary);font-family:var(--pon-font-body);font-weight:700;letter-spacing:.02em}
+.pon-card h4 .pon-ico{width:17px;text-align:center;color:var(--pon-accent);flex-shrink:0}
+.pon-card ul{list-style:none;font-size:.87rem;margin:0;padding:0}
+.pon-card li{padding:5px 0 5px 19px;position:relative;line-height:1.5}
+.pon-card li::before{content:"▸";position:absolute;left:0;color:var(--pon-accent);font-weight:700}
+.pon-card li.pon-yes::before{content:"✓";color:var(--pon-success)}
+.pon-card li.pon-no::before {content:"✕";color:var(--pon-danger)}
+.pon-card li strong{color:var(--pon-primary)}
+.pon-card.pon-watch{border-left-color:var(--pon-danger);background:#fdf3f2}
+.pon-card.pon-watch h4,.pon-card.pon-watch h4 .pon-ico{color:var(--pon-danger)}
+.pon-card.pon-watch li::before{content:"!";color:var(--pon-danger);font-weight:700}
+.pon-card.pon-watch li strong{color:var(--pon-danger)}
+
+/* ---------- red flags ---------- */
+.pon-redflag{background:linear-gradient(135deg,#fdf3f2,#fbe9e7);border:2px solid var(--pon-danger);border-radius:var(--pon-radius);padding:28px 30px;margin-top:26px;max-width:1000px;margin-left:auto;margin-right:auto}
+.pon-redflag h3{color:var(--pon-danger);display:flex;align-items:center;gap:11px;font-size:1.2rem;margin:0 0 7px;font-family:var(--pon-font-head)}
+.pon-redflag>p{font-size:.89rem;color:#7d2c22;margin:0 0 17px}
+.pon-rf-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(256px,1fr));gap:11px}
+.pon-rf{background:#fff;border-radius:var(--pon-radius-sm);padding:13px 15px;font-size:.85rem;border-left:3px solid var(--pon-danger);line-height:1.45}
+.pon-rf strong{color:var(--pon-danger);display:block;font-size:.8rem;margin-bottom:2px}
+.pon-er{margin-top:17px;background:var(--pon-danger);color:#fff;padding:13px 18px;border-radius:var(--pon-radius-sm);font-size:.87rem;font-weight:600;display:flex;align-items:center;gap:11px}
+
+/* ---------- disclaimer ---------- */
+.pon-disclaimer{max-width:1000px;margin:18px auto 0;font-size:.78rem;color:var(--pon-text-lt);line-height:1.65;text-align:center;font-style:italic}
+
+/* ---------- print ---------- */
+@media print{
+  .pon-opts,.pon-slider-wrap{display:none}
+  .pon-shell{box-shadow:none;border:1px solid #999}
+  .pon-grid{grid-template-columns:1fr 1fr}
+  .pon-card{break-inside:avoid}
+}
+@media(max-width:640px){
+  .pon-body{padding:20px}
+  .pon-head{padding:20px}
+  .pon-redflag{padding:20px}
+  .pon-opt{min-width:100%}
+}

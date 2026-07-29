@@ -1444,3 +1444,112 @@ ul {
     white-space: nowrap;
     border: 0;
 }
+
+/* ============================================================================
+   ADDED COMPONENTS — hero slogan, PubMed feed, info cards, visit list,
+   FAQ accordion, medication ladder, affiliation ticker.
+   Design tokens come from :root at the top of this file.
+   ========================================================================== */
+:root { --color-danger: #c0392b; --color-warn: #e67e22; }
+
+/* ---------- hero slogan ---------- */
+.hero-slogan{font-family:var(--font-heading);font-style:italic;font-size:1.6rem;color:var(--color-gold);margin:10px 0 6px;font-weight:500;line-height:1.3}
+
+/* ---------- subsection heading ---------- */
+.subsection-title{font-family:var(--font-heading);font-size:1.45rem;color:var(--color-primary);text-align:center;margin:52px 0 8px}
+.subsection-title::after{content:"";display:block;width:48px;height:3px;background:var(--color-gold);margin:13px auto 26px;border-radius:2px}
+
+/* ---------- live PubMed feed ---------- */
+.pubmed-live{background:linear-gradient(135deg,var(--color-primary),var(--color-primary-light));border-radius:var(--radius-lg);padding:28px 30px;margin-bottom:36px;color:#fff;box-shadow:var(--shadow-lg)}
+.pubmed-live-head{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:6px}
+.pubmed-live-head h3{color:#fff;margin:0;font-size:1.2rem}
+.pubmed-live-head h3 i{color:var(--color-gold);margin-right:8px}
+.pubmed-live-links{display:flex;gap:10px;flex-wrap:wrap}
+.pubmed-live-links .btn{padding:8px 18px;font-size:.84rem}
+.pubmed-live-links .btn-outline{border-color:rgba(255,255,255,.5);color:#fff}
+.pubmed-live-links .btn-outline:hover{background:#fff;color:var(--color-primary)}
+.pubmed-live-note{font-size:.85rem;opacity:.85;margin-bottom:16px}
+#pubFeed{max-height:290px;overflow-y:auto;background:rgba(0,0,0,.16);border-radius:var(--radius-md);padding:16px 20px;list-style:none;margin:0}
+#pubFeed .publication-item{color:#fff;opacity:.94;font-size:.86rem;border:none;padding:8px 0;line-height:1.55}
+#pubFeed .pub-year{color:var(--color-gold);font-weight:700;margin-right:6px}
+#pubFeed a{color:var(--color-gold);font-size:.78rem;text-decoration:none}
+#pubFeed a:hover{text-decoration:underline}
+
+/* ---------- info cards (locations / languages / insurance) ---------- */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:34px}
+.info-card{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:26px 24px;border-top:4px solid var(--color-accent)}
+.info-card h3{font-size:1.1rem;margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.info-card h3 i{color:var(--color-accent);font-size:.95rem}
+.info-card p{font-size:.9rem;color:var(--color-text-light);margin-bottom:9px}
+.info-card ul{margin-left:18px;font-size:.9rem;color:var(--color-text-light);line-height:1.75}
+.info-card strong{color:var(--color-text)}
+.info-card a{color:var(--color-accent);font-weight:600;text-decoration:none}
+.info-card a:hover{text-decoration:underline}
+.info-fine{font-size:.83rem !important;font-style:italic;margin-bottom:0 !important}
+
+/* ---------- what to expect at your visit ---------- */
+.visit-list{max-width:940px;margin:0 auto}
+.visit-item{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:20px 24px;margin-bottom:13px;border-left:4px solid var(--color-accent)}
+.visit-item h4{font-size:1rem;margin-bottom:8px;font-family:var(--font-body);font-weight:700;color:var(--color-primary);display:flex;align-items:center;gap:10px}
+.visit-item h4 i{color:var(--color-accent);width:18px;text-align:center}
+.visit-item p{font-size:.89rem;color:var(--color-text-light);line-height:1.65;margin-bottom:8px}
+.visit-item p:last-child{margin-bottom:0}
+.visit-item strong{color:var(--color-text)}
+.visit-item.critical{border-left-color:var(--color-danger);background:#fdf6f5}
+.visit-item.critical h4,.visit-item.critical h4 i{color:var(--color-danger)}
+
+/* ---------- FAQ accordion ---------- */
+.faq{max-width:880px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);margin-bottom:10px;overflow:hidden}
+.faq-q{width:100%;text-align:left;padding:17px 21px;background:none;border:none;font-family:var(--font-body);font-size:.98rem;font-weight:600;color:var(--color-primary);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.faq-q:hover{background:var(--color-bg-alt)}
+.faq-q .chev{transition:var(--transition);color:var(--color-accent);flex-shrink:0;font-size:.8rem}
+.faq-item.open .chev{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .33s ease;padding:0 21px}
+.faq-item.open .faq-a{max-height:900px;padding:0 21px 19px}
+.faq-a p{font-size:.89rem;color:var(--color-text-light);line-height:1.7;margin-bottom:10px}
+.faq-a p:last-child{margin-bottom:0}
+.faq-a strong{color:var(--color-text)}
+
+/* ---------- medication ladder ---------- */
+.ladder{display:grid;gap:12px;max-width:900px;margin:0 auto}
+.rung{display:flex;gap:17px;align-items:flex-start;background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);padding:18px 21px;transition:var(--transition)}
+.rung:hover{box-shadow:var(--shadow-md)}
+.rung .tier{flex-shrink:0;width:43px;height:43px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:1.02rem;font-family:var(--font-heading)}
+.rung.t1 .tier{background:var(--color-success)}
+.rung.t2 .tier{background:var(--color-accent)}
+.rung.t3 .tier{background:var(--color-warn)}
+.rung.t4 .tier{background:var(--color-danger)}
+.rung.t5 .tier{background:#7f8c8d}
+.rung.t6 .tier{background:#8e44ad}
+.rung h4{font-size:.99rem;margin-bottom:5px;font-family:var(--font-body);font-weight:700;color:var(--color-primary)}
+.rung p{font-size:.865rem;color:var(--color-text-light);line-height:1.6;margin:0}
+.rung strong{color:var(--color-text)}
+.rung .dose{display:inline-block;background:var(--color-bg-alt);border:1px solid var(--color-border);border-radius:var(--radius-sm);padding:3px 9px;font-size:.77rem;font-weight:600;color:var(--color-primary);margin-top:8px;font-family:ui-monospace,Menlo,monospace}
+.caution{max-width:900px;margin:20px auto 0;background:#fdf3f2;border:2px solid var(--color-danger);border-radius:var(--radius-md);padding:20px 24px}
+.caution h3{color:var(--color-danger);margin-bottom:8px;font-size:1.05rem}
+.caution p{margin:0;font-size:.88rem;color:#7d2c22;line-height:1.65}
+.caution strong{color:#7d2c22}
+
+/* ---------- affiliation ticker (ESPN-style undertext) ---------- */
+.ticker{background:var(--color-primary-dark);overflow:hidden;border-top:1px solid rgba(255,255,255,.09)}
+.ticker-inner{display:flex;align-items:stretch;height:36px}
+.ticker-tag{background:var(--color-gold);color:var(--color-primary-dark);font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:0 15px;display:flex;align-items:center;flex-shrink:0;white-space:nowrap}
+.ticker-view{overflow:hidden;flex:1;position:relative}
+.ticker-track{display:flex;align-items:center;width:max-content;height:36px;animation:tickerPan 64s linear infinite}
+.ticker:hover .ticker-track{animation-play-state:paused}
+@keyframes tickerPan{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+.tk{display:flex;align-items:center;gap:6px;padding:0 17px;flex-shrink:0;white-space:nowrap;border-right:1px solid rgba(255,255,255,.09)}
+.tk img{max-height:17px;max-width:54px;object-fit:contain;filter:brightness(0) invert(1);opacity:.82}
+.tk .ab{font-size:.7rem;font-weight:700;color:#fff;letter-spacing:.05em}
+.tk .nm{font-size:.66rem;color:rgba(255,255,255,.55)}
+.tk .star{color:var(--color-gold);font-size:.74rem;font-weight:700}
+.ticker-legend{background:var(--color-bg-dark);color:rgba(255,255,255,.42);font-size:.63rem;text-align:center;padding:7px 0;letter-spacing:.02em;margin:0}
+.ticker-legend .star{color:var(--color-gold);font-weight:700}
+
+@media(max-width:700px){
+  .hero-slogan{font-size:1.2rem}
+  .pubmed-live{padding:20px}
+  .pubmed-live-head{flex-direction:column;align-items:flex-start}
+}
