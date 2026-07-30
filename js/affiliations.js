@@ -18,11 +18,15 @@
 
 const AFFILIATIONS = [
     /* --- Training institutions --------------------------------------------
-       Drop logo files into images/affiliations/ to replace the text tiles.
-       A missing file silently falls back to the abbreviation.               */
-    { abbr: 'UIC',   name: 'University of Illinois Chicago — Dept. of Orthopaedic Surgery', src: 'images/affiliations/uic-ortho.png' },
-    { abbr: 'OSU',   name: 'The Ohio State University — College of Medicine',               src: 'images/affiliations/osu-com.png' },
-    { abbr: 'PITT',  name: 'Pitt Swanson Engineering — Bioengineering',                     src: 'images/affiliations/pitt-swanson-bioe.png' },
+       Deliberately TEXT tiles, even though the real logo files now exist in
+       images/affiliations/. The ticker renders logos at 17px tall and applies
+       brightness(0) invert(1) to knock them white against the navy bar — which
+       turns the round UIC and OSU seals into illegible blobs at that size. The
+       full-colour logos are used on education.html where they have room.
+       To try them here anyway, add e.g. src: 'images/affiliations/uic-ortho.jpg'. */
+    { abbr: 'UIC',   name: 'University of Illinois Chicago — Dept. of Orthopaedic Surgery' },
+    { abbr: 'OSU',   name: 'The Ohio State University — College of Medicine' },
+    { abbr: 'PITT',  name: 'Pitt Swanson Engineering — Bioengineering' },
 
     /* --- Professional societies ------------------------------------------- */
     { abbr: 'ASSH',  name: 'American Society for Surgery of the Hand',         resident: true },
