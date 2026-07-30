@@ -17,14 +17,39 @@ document.addEventListener('DOMContentLoaded', () => {
             navToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
         });
 
-        // Close menu when a link is clicked
-        navMenu.querySelectorAll('.nav-link').forEach(link => {
+        // Close the panel once an actual destination link is tapped.
+        navMenu.querySelectorAll('.dropdown-link, li:not(.nav-item-dropdown) > .nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('open');
                 navToggle.setAttribute('aria-expanded', 'false');
             });
         });
     }
+
+    // --- Mobile: tap a parent item to expand its submenu downward ---
+    // Desktop keeps the CSS :hover behaviour; below 768px the parent link
+    // becomes a toggle so the submenu can never be opened off-screen.
+    const isMobileNav = () => window.matchMedia('(max-width: 768px)').matches;
+
+    document.querySelectorAll('.nav-item-dropdown > .nav-link').forEach(parent => {
+        parent.addEventListener('click', (e) => {
+            if (!isMobileNav()) return;
+            e.preventDefault();
+            const li = parent.parentElement;
+            const wasOpen = li.classList.contains('open');
+            document.querySelectorAll('.nav-item-dropdown.open').forEach(o => o.classList.remove('open'));
+            li.classList.toggle('open', !wasOpen);
+        });
+    });
+
+    // Reset mobile submenu state when returning to desktop widths
+    window.addEventListener('resize', () => {
+        if (!isMobileNav()) {
+            document.querySelectorAll('.nav-item-dropdown.open').forEach(o => o.classList.remove('open'));
+            if (navMenu) navMenu.classList.remove('open');
+            if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+        }
+    });
 
     // --- Navbar scroll effect ---
     const navbar = document.getElementById('navbar');
@@ -35,10 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Active nav link on scroll ---
+    // Only in-page (#hash) links participate; cross-page links keep whatever
+    // .active the page itself set, so interior pages stay highlighted.
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = Array.from(document.querySelectorAll('.nav-link'))
+        .filter(l => (l.getAttribute('href') || '').startsWith('#'));
 
     function updateActiveNav() {
+        if (!navLinks.length) return;
         const scrollY = window.scrollY + 100;
 
         sections.forEach(section => {
@@ -81,6 +110,26 @@ document.addEventListener('DOMContentLoaded', () => {
             placeholder.style.display = 'flex';
         }
     }
+
+    // --- Filter chips that target a named grid (e.g. the protocols grid) ---
+    // resources.js only wires up chips WITHOUT data-target; this handles the rest.
+    const targetedChips = document.querySelectorAll('.filter-btn[data-target]');
+    targetedChips.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const gridId = btn.dataset.target;
+            const grid = document.getElementById(gridId);
+            if (!grid) return;
+
+            document.querySelectorAll(`.filter-btn[data-target="${gridId}"]`)
+                .forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+            grid.querySelectorAll('.resource-card').forEach(card => {
+                card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+            });
+        });
+    });
 
     // --- Smooth reveal on scroll (intersection observer) ---
     const revealElements = document.querySelectorAll('.timeline-item, .pillar, .interest-card, .resource-card, .video-card, .disclosure-box');

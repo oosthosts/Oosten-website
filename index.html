@@ -11,39 +11,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/postop-navigator.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">
+            <a href="index.html" class="nav-logo">
                 <span class="logo-name">JAMES D. OOSTEN, MD</span>
                 <span class="logo-subtitle">ORTHOPAEDIC SURGERY &nbsp;|&nbsp; HAND &nbsp;|&nbsp; WRIST &nbsp;|&nbsp; FOREARM &nbsp;|&nbsp; ELBOW &nbsp;|&nbsp; SHOULDER</span>
             </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="index.html" class="nav-link active">Home</a></li>
                 <li class="nav-item-dropdown">
-                    <a href="#about" class="nav-link">About &#9662;</a>
+                    <a href="about.html" class="nav-link">About &#9662;</a>
                     <div class="dropdown-menu">
-                        <a href="#education" class="dropdown-link">Education</a>
-                        <a href="#research" class="dropdown-link">Research</a>
-                        <a href="#disclosures" class="dropdown-link">Disclosures</a>
-                        <a href="#beyond-medicine" class="dropdown-link">Beyond Medicine</a>
-                        <a href="#contact" class="dropdown-link">Contact Us</a>
+                        <a href="about.html" class="dropdown-link">About Dr. Oosten</a>
+                        <a href="education.html" class="dropdown-link">Education &amp; Training</a>
+                        <a href="research.html" class="dropdown-link">Research &amp; Publications</a>
+                        <a href="about.html#beyond-medicine" class="dropdown-link">Beyond Medicine</a>
+                        <a href="index.html#disclosures" class="dropdown-link">Disclosures</a>
                     </div>
                 </li>
                 <li class="nav-item-dropdown">
-                    <a href="#patient-care" class="nav-link">Patient Care &#9662;</a>
+                    <a href="patient-resources.html" class="nav-link">Patient Care &#9662;</a>
                     <div class="dropdown-menu">
-                        <a href="#conditions" class="dropdown-link">Conditions Treated</a>
-                        <a href="#resources" class="dropdown-link">Patient Education</a>
-                        <a href="#protocols" class="dropdown-link">Therapy Protocols</a>
-                        <a href="#postop" class="dropdown-link">Post-Op Care</a>
-                        <a href="#faq" class="dropdown-link">FAQ</a>
-                        <a href="#visit" class="dropdown-link">Your Visit</a>
-                        <a href="#videos" class="dropdown-link">Videos</a>
-                        <a href="#locations" class="dropdown-link">Locations</a>
+                        <a href="index.html#conditions" class="dropdown-link">Conditions Treated</a>
+                        <a href="patient-resources.html" class="dropdown-link">Patient Education</a>
+                        <a href="patient-resources.html#protocols" class="dropdown-link">Therapy Protocols</a>
+                        <a href="patient-resources.html#videos" class="dropdown-link">Educational Videos</a>
+                        <a href="postop.html" class="dropdown-link">Post-Operative Care</a>
+                        <a href="faq.html" class="dropdown-link">FAQ</a>
+                        <a href="prepare.html" class="dropdown-link">Preparing for Your Visit</a>
+                        <a href="index.html#locations" class="dropdown-link">Locations</a>
                     </div>
                 </li>
             </ul>
@@ -60,8 +62,8 @@
                 <p class="hero-slogan">&ldquo;Returning you to what you love.&rdquo;</p>
                 <p class="hero-description">Specializing in Shoulder, Elbow, Forearm, Wrist &amp; Hand</p>
                 <div class="hero-cta">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#about" class="btn btn-outline">Learn More</a>
+                    <a href="prepare.html" class="btn btn-primary">Get in Touch</a>
+                    <a href="about.html" class="btn btn-outline">Learn More</a>
                 </div>
             </div>
             <div class="hero-image">
@@ -72,6 +74,8 @@
                 </div>
             </div>
         </div>
+        <!-- Social icons sit in normal flow below the CTA buttons (see .hero-social
+             in css/style.css) so they cannot overlap them on narrow screens. -->
         <div class="hero-social">
             <a href="https://www.linkedin.com/in/james-oosten" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
@@ -85,228 +89,69 @@
         </div>
     </section>
 
-    <!-- Affiliations Banner -->
-    <section class="affiliations-banner">
+    <!-- Explore / Section Boxes -->
+    <section class="section" id="explore">
         <div class="container">
-            <div class="affiliations-row">
-                <span class="affiliation-badge">ASSH</span>
-                <span class="affiliation-badge">AAHS</span>
-                <span class="affiliation-badge">AOA</span>
-                <span class="affiliation-badge">ORS</span>
-                <span class="affiliation-badge">AOSSM</span>
-                <span class="affiliation-badge">A&Omega;A</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Dr. Oosten</h2>
-            <div class="about-content">
-                <p>Dr. James D. Oosten is an orthopaedic surgeon specializing in conditions of the hand, wrist, forearm, elbow, and shoulder. With a foundation in bioengineering and biomechanics from the University of Pittsburgh and his medical degree from The Ohio State University College of Medicine, and his own experiences as a patient, Dr. Oosten brings a unique perspective that helps him treat your conditions in a way that is specific to you and your needs.</p>
-                <p>One thing Dr. Oosten will never take for granted is the opportunity granted to him by his childhood orthopedic surgeons. Born with severe clubfoot, he spent considerable time with orthopedic providers throughout his youth &mdash; an experience that sparked a lifelong fascination with musculoskeletal anatomy and the field of orthopedic biomechanics. Coupled with a passion for working with his hands developed through DIY projects and engineering, he became set on a career in orthopedic surgery from an early age.</p>
-                <p>His practice encompasses the full spectrum of upper extremity conditions, from acute traumatic injuries such as fractures and tendon injuries to chronic conditions including arthritis, nerve compression, and complex reconstructive cases. Dr. Oosten is committed to providing expert, compassionate surgical care to help patients restore function and return to the activities they love.</p>
-                <p>As a researcher with publications in hand and upper extremity surgery, trauma, sports medicine, spine surgery, biomechanics, and basic science, Dr. Oosten believes that a firm understanding of the science governing the procedures we do can help optimize treatment outcomes. He is also committed to using his engineering background to advance the field of Orthopaedic Surgery by improving surgical devices and items used in nonsurgical or postoperative care of patients.</p>
-            </div>
-            <div style="text-align:center;margin-top:32px;">
-                <a href="documents/Oosten_CV_2026.pdf" class="btn btn-primary" download>
-                    <i class="fas fa-file-download"></i> Download CV
+            <h2 class="section-title">Explore</h2>
+            <p class="section-intro">Background, academic work, training, and everything you need before your first appointment.</p>
+            <div class="section-cards">
+                <a href="about.html" class="section-card">
+                    <i class="fas fa-user-md"></i>
+                    <h3>About Dr. Oosten</h3>
+                    <p>Background, philosophy of care, and life outside the operating room.</p>
+                    <span class="go">View &rarr;</span>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Training Section -->
-    <section class="section section-alt" id="education">
-        <div class="container">
-            <h2 class="section-title">Education &amp; Training</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Orthopaedic Surgery Residency <span class="inst-badge inst-badge-uic">UIC</span></h3>
-                        <p class="timeline-institution">University of Illinois at Chicago &mdash; Department of Orthopaedic Surgery</p>
-                        <p class="timeline-year">2023 &ndash; 2028 (Class of 2028)</p>
-                        <p style="font-size:0.9rem;color:var(--color-text-light);margin-top:4px;">OITE Exam: 94th Percentile &bull; Appointed Class Representative &bull; Illinois State Resident Representative (NOLC)</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Doctor of Medicine (MD) <span class="inst-badge inst-badge-osu">OSU</span></h3>
-                        <p class="timeline-institution">The Ohio State University College of Medicine</p>
-                        <p class="timeline-year">2019 &ndash; 2023</p>
-                        <p style="font-size:0.9rem;color:var(--color-text-light);margin-top:4px;">Cum Laude &bull; Alpha Omega Alpha Honor Society &bull; Landacre Research Honor Society</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Science in Bioengineering <span class="inst-badge inst-badge-pitt">PITT</span></h3>
-                        <p class="timeline-institution">University of Pittsburgh &mdash; Swanson School of Engineering</p>
-                        <p class="timeline-year">2014 &ndash; 2018</p>
-                        <p style="font-size:0.9rem;color:var(--color-text-light);margin-top:4px;">Summa cum Laude &bull; Concentration: Biomechanics &amp; Biodynamics &bull; Minor: Chemistry &bull; Outstanding Biomechanics Student of the Year &bull; Honors College Scholar</p>
-                    </div>
-                </div>
-            </div>
-            <div class="certifications">
-                <h3>Professional Memberships</h3>
-                <ul>
-                    <li>American Association for Hand Surgery (AAHS)</li>
-                    <li>American Society for Surgery of the Hand (ASSH) &mdash; Candidate Member</li>
-                    <li>American Orthopaedic Association (AOA) &mdash; Resident Member</li>
-                    <li>Orthopaedic Research Society (ORS)</li>
-                    <li>American Orthopaedic Society for Sports Medicine (AOSSM)</li>
-                    <li>Clinical Orthopaedic Society (COS)</li>
-                    <li>Illinois Association of Orthopaedic Surgeons &mdash; Resident Representative</li>
-                    <li>Alpha Omega Alpha (AOA) Honor Society</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Research Section -->
-    <section class="section" id="research">
-        <div class="container">
-            <h2 class="section-title">Research &amp; Publications</h2>
-            <p class="section-intro">Dr. Oosten is committed to advancing the field of Orthopaedic Surgery through his academic contributions, which include publications in numerous high-impact peer reviewed journals, instructional lectures, and book Chapters.</p>
-
-            <div class="pubmed-live">
-                <div class="pubmed-live-head">
-                    <h3><i class="fas fa-book-medical"></i> Live Publication Feed</h3>
-                    <div class="pubmed-live-links">
-                        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://orcid.org/0000-0002-8688-9159"><i class="fab fa-orcid"></i> ORCID</a>
-                        <a class="btn btn-outline" target="_blank" rel="noopener" href="https://pubmed.ncbi.nlm.nih.gov/?term=Oosten+J%5BAuthor%5D+NOT+van+Oosten%5BAuthor%5D+AND+2020%3A3000%5Bdp%5D&amp;sort=date"><i class="fas fa-arrow-up-right-from-square"></i> PubMed</a>
-                    </div>
-                </div>
-                <p class="pubmed-live-note">Updated automatically from PubMed &mdash; <span id="pubCount">&hellip;</span> indexed publications.</p>
-                <ul id="pubFeed" class="publication-list"><li class="publication-item">Loading from PubMed&hellip;</li></ul>
-            </div>
-
-            <div class="research-categories">
-                <div class="research-category">
-                    <h3><i class="fas fa-file-medical-alt"></i> Peer-Reviewed Publications</h3>
-                    <ul class="publication-list" id="publications">
-                        <li class="publication-item">Mzeihem M, Nyaaba W, <strong>Oosten J</strong>, Gonzalez M, Koh J, Goldberg B, Amirouche F. Development and Validation of the APEX-HBD SCORe: A Multivariable Prediction Model for Postoperative Complications in Patients Undergoing Shoulder Arthroplasty. <em>J Shoulder Elbow Surg</em>, 2025.</li>
-                        <li class="publication-item">Veliky C, <strong>Oosten J</strong>, Bustamante G, et al. Minimally Invasive Intraoperative Strategies May Influence Success Rate and Return to Sport in Arthroscopic Treatment of Patellar Tendinopathy: A Systematic Review. <em>J Orthopaedic Experience &amp; Innovation</em>, 2025.</li>
-                        <li class="publication-item"><strong>Oosten JD</strong>, Siegel MA, Hutchinson MR. &lsquo;Chapter 12: It&rsquo;s Polluted.&rsquo; In <em>Sports Medicine: It&rsquo;s Environment</em>. Springer, 2025.</li>
-                        <li class="publication-item"><strong>Oosten J</strong>, DiBartola A, Wright J, et al. More Is Not Merrier: Increasing Numbers of All-Inside Implants Do Not Correlate With Higher Odds of Revision Surgery. <em>J Knee Surg</em>, 2024;37(5):361-367.</li>
-                        <li class="publication-item"><strong>Oosten J</strong>, Yoder R, DiBartola A, et al. Several Techniques Exist with Favorable Biomechanical Outcomes in Radial Meniscus Tear Repair &mdash; A Systematic Review. <em>Arthroscopy</em>, 2022;38(8):2557-2578.</li>
-                        <li class="publication-item">Toop N, Grossbach A, Gibbs D, ... <strong>Oosten J</strong>, et al. Static Cage Morphology in Short-Segment TLIF Is Associated With Alterations in Foraminal Height. <em>World Neurosurgery</em>, 2022;159:e389-e398.</li>
-                        <li class="publication-item">Toop N, Viljoen S, Baum J, ... <strong>Oosten J</strong>, et al. Radiographic and Clinical Outcomes in One and Two Level TLIF: A Comparison of Bullet versus Banana Cages. <em>JNS Spine</em>, 2021;36(6):918-927.</li>
-                        <li class="publication-item">Snoznik C, Medvedeva V, ... <strong>Oosten J</strong>, Kalb R, &amp; Lamitina T. The Nuclear Ubiquitin Ligase Adaptor SPOP Is a Conserved Regulator of C9orf72 Dipeptide Toxicity. <em>PNAS</em>, 2021;118(40).</li>
-                    </ul>
-                </div>
-
-                <div class="research-category">
-                    <h3><i class="fas fa-chalkboard-teacher"></i> Selected Presentations</h3>
-                    <ul class="publication-list" id="presentations">
-                        <li class="publication-item"><strong>Oosten J</strong>, et al. Atypical Causes and Mimickers of Digital Flexor Tenosynovitis: A Systematic Review. <em>ORS Annual Meeting</em>, Phoenix, AZ, 2025.</li>
-                        <li class="publication-item">Mzeihem M, Nyaaba W, <strong>Oosten J</strong>, et al. APEX-HBD SCORe: A Risk Assessment Tool for Complications Following Shoulder Arthroplasty. <strong>1st Place Resident Research Award</strong>, <em>ASES Regional Meeting</em>, Chicago, 2025.</li>
-                        <li class="publication-item">Roge S, Alvarez J, Mungalpara N, <strong>Oosten J</strong>, Gonzalez M. Outcomes in Flexor and Extensor Tendon Repair using WALANT vs Traditional Anesthesia. Podium, <em>ASSH Annual Meeting</em>, Vancouver, 2025.</li>
-                        <li class="publication-item"><strong>Oosten J</strong>, DiBartola A, et al. The More the Merrier? An Analysis of Meniscus Repair Failure Using All-Inside Implants. Podium, <em>Mid-America Orthopaedic Association</em>, San Antonio, 2022.</li>
-                        <li class="publication-item"><strong>Oosten J</strong>, Bustamante G, et al. Comparison of Open Versus Arthroscopic Surgical Outcomes for Patellar Tendinopathy. Podium, <em>ISAKOS Global Congress</em>, Boston, 2023.</li>
-                        <li class="publication-item"><em>...and 20+ additional podium and poster presentations at national and international meetings.</em></li>
-                    </ul>
-                </div>
-
-                <div class="research-category">
-                    <h3><i class="fas fa-flask"></i> Research Interests</h3>
-                    <ul>
-                        <li>Upper extremity trauma and fracture outcomes</li>
-                        <li>Hand and wrist biomechanics and device design</li>
-                        <li>Flexor and extensor tendon surgery techniques</li>
-                        <li>Shoulder arthroplasty outcomes and risk modeling</li>
-                        <li>Sports medicine of the upper extremity</li>
-                        <li>WALANT (Wide Awake Local Anesthesia No Tourniquet) in hand surgery</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Patient Care Section -->
-    <section class="section section-alt" id="patient-care">
-        <div class="container">
-            <h2 class="section-title">Patient Care</h2>
-
-            <!-- Philosophy content -->
-            <div class="philosophy-content">
-                <div class="philosophy-quote">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Every patient deserves a surgeon who listens carefully, explains thoroughly, and partners with them in their recovery.</p>
-                </div>
-                <div class="philosophy-pillars">
-                    <div class="pillar">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Patient-Centered Care</h3>
-                        <p>I believe in treating the whole person, not just the injury. Each treatment plan is tailored to your unique goals, lifestyle, and needs.</p>
-                    </div>
-                    <div class="pillar">
-                        <i class="fas fa-comments"></i>
-                        <h3>Clear Communication</h3>
-                        <p>Understanding your condition is essential to recovery. I take the time to explain your diagnosis, treatment options, and what to expect every step of the way.</p>
-                    </div>
-                    <div class="pillar">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Evidence-Based Treatment</h3>
-                        <p>My approach combines the latest research and surgical techniques with proven clinical experience to deliver the best possible outcomes.</p>
-                    </div>
-                    <div class="pillar">
-                        <i class="fas fa-users"></i>
-                        <h3>Collaborative Recovery</h3>
-                        <p>Optimal outcomes require teamwork. I work closely with hand therapists, rehabilitation specialists, and your primary care team to support your complete recovery.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Languages note -->
-            <div class="languages-note">
-                <i class="fas fa-language"></i>
-                <p><strong>Languages:</strong> English &middot; Spanish &middot; Translator available upon request</p>
-            </div>
-
-            <!-- Explore Patient Care cards -->
-            <div class="care-cards">
-                <a href="#conditions" class="care-card">
-                    <i class="fas fa-stethoscope"></i>
-                    <span>Conditions Treated</span>
+                <a href="research.html" class="section-card">
+                    <i class="fas fa-microscope"></i>
+                    <h3>Research &amp; Publications</h3>
+                    <p>Peer-reviewed publications, presentations, and active research interests.</p>
+                    <span class="go">View &rarr;</span>
                 </a>
-                <a href="#resources" class="care-card">
-                    <i class="fas fa-file-medical"></i>
-                    <span>Patient Education</span>
+                <a href="education.html" class="section-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Education &amp; Training</h3>
+                    <p>Residency, medical school, bioengineering training, and honors.</p>
+                    <span class="go">View &rarr;</span>
                 </a>
-                <a href="#protocols" class="care-card">
-                    <i class="fas fa-clipboard-list"></i>
-                    <span>Therapy Protocols</span>
-                </a>
-                <a href="#videos" class="care-card">
-                    <i class="fas fa-video"></i>
-                    <span>Videos</span>
-                </a>
-                <a href="#locations" class="care-card">
-                    <i class="fas fa-location-dot"></i>
-                    <span>Locations</span>
-                </a>
-                <a href="#postop" class="care-card">
-                    <i class="fas fa-notes-medical"></i>
-                    <span>Post-Op Care</span>
-                </a>
-                <a href="#visit" class="care-card">
+                <a href="prepare.html" class="section-card">
                     <i class="fas fa-clipboard-check"></i>
-                    <span>Your Visit</span>
+                    <h3>Preparing for Your Visit</h3>
+                    <p>What to bring, insurance information, and how to reach the scheduling team.</p>
+                    <span class="go">View &rarr;</span>
                 </a>
-                <a href="#faq" class="care-card">
+            </div>
+
+            <div class="section-cards" style="margin-top:22px;">
+                <a href="patient-resources.html" class="section-card">
+                    <i class="fas fa-file-medical"></i>
+                    <h3>Patient Resources</h3>
+                    <p>Education handouts, therapy protocols, and educational videos.</p>
+                    <span class="go">View &rarr;</span>
+                </a>
+                <a href="postop.html" class="section-card">
+                    <i class="fas fa-notes-medical"></i>
+                    <h3>Post-Operative Care</h3>
+                    <p>Recovery guidance, wound care, and pain control after surgery.</p>
+                    <span class="go">View &rarr;</span>
+                </a>
+                <a href="faq.html" class="section-card">
                     <i class="fas fa-circle-question"></i>
-                    <span>FAQ</span>
+                    <h3>FAQ</h3>
+                    <p>The questions patients ask most often before and after surgery.</p>
+                    <span class="go">View &rarr;</span>
+                </a>
+                <a href="#conditions" class="section-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Conditions Treated</h3>
+                    <p>The full range of shoulder, elbow, forearm, wrist, and hand conditions.</p>
+                    <span class="go">View &rarr;</span>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Conditions Treated Section -->
-    <section class="section" id="conditions">
+    <!-- Conditions Treated (summary) -->
+    <section class="section section-alt" id="conditions">
         <div class="container">
             <h2 class="section-title">Conditions Treated</h2>
             <p class="section-intro">Comprehensive surgical and non-surgical care for the entire upper extremity.</p>
@@ -380,13 +225,14 @@
                     </ul>
                 </div>
             </div>
+            <p class="resources-note">Detailed education handouts for these conditions are available on the <a href="patient-resources.html">Patient Resources</a> page.</p>
         </div>
     </section>
 
-    <!-- Locations Section -->
-    <section class="section section-alt" id="locations">
+    <!-- Practice Locations -->
+    <section class="section" id="locations">
         <div class="container">
-            <h2 class="section-title">Locations</h2>
+            <h2 class="section-title">Practice Locations</h2>
             <div class="locations-content">
                 <p>Dr. Oosten is currently in residency at the University of Illinois in Chicago, IL.</p>
                 <ul class="locations-list">
@@ -406,268 +252,38 @@
                     <h3><i class="fas fa-location-dot"></i> Practice Locations</h3>
                     <p><strong>Currently in training at the University of Illinois Chicago.</strong></p>
                     <p>Additional information on practice locations to come.</p>
-                    <p>In the meantime, you may be interested in the <a href="#research">research and publications</a> or the <a href="#patient-care">patient care resources</a>.</p>
-                </div>
-                <div class="info-card">
-                    <h3><i class="fas fa-language"></i> Languages</h3>
-                    <ul>
-                        <li><strong>English</strong></li>
-                        <li><strong>Spanish</strong></li>
-                        <li>Translator available upon request</li>
-                    </ul>
-                    <p class="info-fine">Please request a translator when scheduling so it is arranged before your visit.</p>
+                    <p>In the meantime, you may be interested in the <a href="research.html">research and publications</a> or the <a href="patient-resources.html">patient care resources</a>.</p>
                 </div>
                 <div class="info-card">
                     <h3><i class="fas fa-file-invoice-dollar"></i> Insurances Accepted</h3>
                     <p>Please contact your insurance provider to determine what coverage is available for you to see this provider.</p>
+                    <p>Full insurance details are on the <a href="prepare.html">Preparing for Your Visit</a> page.</p>
                     <p class="info-fine">A specific carrier list will be added once in practice.</p>
                 </div>
+                <div class="info-card">
+                    <h3><i class="fas fa-calendar-check"></i> Scheduling</h3>
+                    <p><strong>UIC Call Center: <a href="tel:+13129961300">(312) 996-1300</a></strong></p>
+                    <p>Please request a translator when scheduling so it is arranged before your visit.</p>
+                    <p class="info-fine">Placeholder number &mdash; direct scheduling details will follow.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- What to Expect at Your Visit -->
-    <section class="section" id="visit">
+    <!-- Languages -->
+    <section class="section section-alt" id="languages">
         <div class="container">
-            <h2 class="section-title">What to Expect at Your Visit</h2>
-            <p class="section-intro">A few things to know before your appointment so we can make the most of your time.</p>
-            <div class="visit-list">
-                <div class="visit-item critical">
-                    <h4><i class="fas fa-compact-disc"></i> If you have had imaging done anywhere else &mdash; bring both</h4>
-                    <p><strong>Bring a CD or USB drive containing the actual images, and a printed or PDF copy of the imaging report.</strong> One without the other is frequently not enough. The report tells us what a radiologist concluded; the images let us look ourselves.</p>
-                    <p>For prior <strong>EMGs or previous surgeries</strong>, bring the procedure note or operative report from that surgeon, along with any post-operative instructions and any other imaging you have.</p>
-                </div>
-                <div class="visit-item">
-                    <h4><i class="fas fa-x-ray"></i> Imaging on the day</h4>
-                    <p>Simpler imaging such as <strong>X-rays and ultrasound</strong> can often be done the day of your appointment. <strong>Advanced imaging such as MRI and CT is usually not available same-day</strong> and generally needs to be scheduled separately, sometimes pending insurance authorization.</p>
-                </div>
-                <div class="visit-item">
-                    <h4><i class="fas fa-shirt"></i> What to wear</h4>
-                    <p>For upper extremity problems we need to examine the entire arm and shoulder, and occasionally the neck. Please wear clothing that comes off easily &mdash; a <strong>loose button-down shirt</strong> is ideal. Tight sleeves make a proper exam difficult.</p>
-                </div>
-                <div class="visit-item">
-                    <h4><i class="fas fa-hand-holding-dollar"></i> Costs and coverage</h4>
-                    <p>You may have a <strong>co-pay</strong>, and what you owe can vary depending on which services are provided at the visit. Contact your insurance provider ahead of time to understand your coverage.</p>
-                </div>
-                <div class="visit-item">
-                    <h4><i class="fas fa-syringe"></i> If you are hoping for surgery or an injection</h4>
-                    <p>There may be <strong>additional treatment steps required before a procedure can be scheduled</strong> &mdash; imaging, a course of therapy, or documentation your insurer requires. The first visit is often about establishing that pathway rather than performing the procedure itself.</p>
-                </div>
-                <div class="visit-item critical">
-                    <h4><i class="fas fa-file-signature"></i> Disability, FMLA, and insurance paperwork</h4>
-                    <p><strong>Paperwork generally cannot be completed during your appointment.</strong> Send it ahead of time or leave it with us afterwards, and allow a <strong>two-week window</strong> for it to be completed and returned.</p>
-                    <p>Fax it to the office and call to let us know it is coming, so it does not sit unnoticed.</p>
-                </div>
-                <div class="visit-item">
-                    <h4><i class="fas fa-language"></i> Language support</h4>
-                    <p>Care is provided in <strong>English and Spanish</strong>. A translator can be arranged for other languages &mdash; please request one when scheduling so it is in place before you arrive.</p>
-                </div>
+            <h2 class="section-title">Languages</h2>
+            <p class="section-intro">Care is provided directly in English and Spanish, with interpretation available for any other language.</p>
+            <div class="languages-note">
+                <i class="fas fa-language"></i>
+                <p><strong>Languages:</strong> English &middot; Spanish &middot; Translator available upon request</p>
             </div>
+            <p class="resources-note">Please request a translator when you schedule so it is in place before you arrive.</p>
         </div>
     </section>
 
-    <!-- Patient Education Section -->
-    <section class="section" id="resources">
-        <div class="container">
-            <h2 class="section-title">Patient Education</h2>
-            <p class="section-intro">Educational materials to help you understand your condition, treatment options, and what to expect before and after surgery.</p>
-
-            <div class="resource-filter">
-                <button class="filter-btn active" data-filter="all">All Topics</button>
-                <button class="filter-btn" data-filter="shoulder"><i class="fas fa-person-walking"></i> Shoulder</button>
-                <button class="filter-btn" data-filter="hand"><i class="fas fa-hand"></i> Hand &amp; Fingers</button>
-                <button class="filter-btn" data-filter="wrist"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 2 Q8.5 9 9.5 13"/><path d="M15 2 Q15.5 9 14.5 13"/><line x1="7" y1="13" x2="17" y2="13"/><rect x="7" y="14.5" width="4" height="3" rx="1"/><rect x="13" y="14.5" width="4" height="3" rx="1"/><rect x="7" y="18.5" width="4" height="3" rx="1"/><rect x="13" y="18.5" width="4" height="3" rx="1"/></svg></span> Forearm &amp; Wrist</button>
-                <button class="filter-btn" data-filter="elbow"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2 L12 12"/><circle cx="12" cy="14" r="3.5"/><path d="M14.8 16.4 L21 20"/></svg></span> Elbow</button>
-                <button class="filter-btn" data-filter="nerve"><i class="fas fa-microscope"></i> Nerve</button>
-            </div>
-
-            <div class="resources-grid" id="resourcesGrid">
-                <!-- Loaded dynamically from resources.js -->
-            </div>
-
-            <p class="resources-note"><em>These materials are for educational purposes and supplement, but do not replace, the personalized guidance from your surgeon and therapy team.</em></p>
-            <p class="resources-disclaimer"><strong>Disclaimer:</strong> The documents and rehabilitation information provided on this website are intended solely for patients currently under the care of Dr. Oosten. This content is meant to complement, not replace, professional medical advice, diagnosis, or treatment. As always, seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition or treatment. Do not disregard or delay professional medical advice based on information from this website.</p>
-        </div>
-    </section>
-
-    <!-- Therapy Protocols Section -->
-    <section class="section section-alt" id="protocols">
-        <div class="container">
-            <h2 class="section-title">Therapy Protocols</h2>
-            <p class="section-intro">Post-operative rehabilitation protocols and non-operative exercise programs for your physical or hand therapist.</p>
-
-            <div class="resource-filter">
-                <button class="filter-btn active" data-filter="all" data-target="protocolsGrid">All Protocols</button>
-                <button class="filter-btn" data-filter="shoulder-proto" data-target="protocolsGrid"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M8 21 Q4 13 8 5"/><circle cx="15" cy="13" r="6"/><line x1="15" y1="19" x2="15" y2="24"/></svg></span> Shoulder</button>
-                <button class="filter-btn" data-filter="elbow-proto" data-target="protocolsGrid"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2 L12 12"/><circle cx="12" cy="14" r="3.5"/><path d="M14.8 16.4 L21 20"/></svg></span> Elbow</button>
-                <button class="filter-btn" data-filter="hand-proto" data-target="protocolsGrid"><i class="fas fa-hand"></i> Hand, Forearm &amp; Wrist</button>
-                <button class="filter-btn" data-filter="nonop" data-target="protocolsGrid"><i class="fas fa-leaf"></i> Non-Operative Programs</button>
-            </div>
-
-            <div class="resources-grid" id="protocolsGrid">
-                <!-- Loaded dynamically from protocols.js -->
-            </div>
-
-            <p class="resources-note"><em>These protocols are intended solely for patients under the care of Dr. Oosten. They supplement, but do not replace, individualized guidance from your surgeon and therapist.</em></p>
-        </div>
-    </section>
-
-    <!-- Post-Operative Care Section -->
-    <section class="section" id="postop">
-        <div class="container">
-            <h2 class="section-title">Post-Operative Care</h2>
-            <p class="section-intro">Answer two questions below and this will show the guidance that applies to your stage of recovery. Your own post-operative instructions always take priority over anything shown here.</p>
-
-            <div data-postop-navigator></div>
-
-            <h3 class="subsection-title">Pain Control &amp; Medications</h3>
-            <div class="ladder">
-                <div class="rung t1"><div class="tier">1</div><div>
-                    <h4>Elevation &amp; Ice &mdash; start here, always</h4>
-                    <p>Keep the hand, forearm, or elbow above the level of your heart, including while sleeping &mdash; rest it on a pillow. For hand and forearm surgery, loosely tape or wrap two pillows together and nest the hand between them to stay propped up overnight. <strong>Do not place ice directly on your fingers</strong> &mdash; place it on the hand or wrist instead, which cools the fingers indirectly. Ice may go over a dressing or splint if the bag is well sealed; even when you feel no cold sensation through the splint, it still reduces swelling.</p>
-                    <span class="dose">Elevate continuously &middot; Ice 15&ndash;20 min with a cloth barrier</span></div></div>
-                <div class="rung t2"><div class="tier">2</div><div>
-                    <h4>Acetaminophen (Tylenol) &mdash; scheduled</h4>
-                    <p>Take on a schedule for the first several days rather than waiting for pain to build. Check every other medication for hidden acetaminophen. Take less than the maximum if you have any liver disease, and speak with your primary care doctor with any questions or concerns.</p>
-                    <span class="dose">No more than 4000 mg in 24 hours &mdash; less with liver disease</span></div></div>
-                <div class="rung t3"><div class="tier">3</div><div>
-                    <h4>Anti-inflammatories</h4>
-                    <p>Layered on top of acetaminophen, not instead of it. Take with food. Appropriate only if you have no stomach or kidney disorder and have not been told you have a contraindication to anti-inflammatory medication.</p>
-                    <span class="dose">With food &middot; confirm with your surgeon after fracture or fusion surgery</span></div></div>
-                <div class="rung t4"><div class="tier">4</div><div>
-                    <h4>Opioids &mdash; breakthrough only</h4>
-                    <p>Use only after acetaminophen and anti-inflammatories have been tried and were not enough. <strong>Opioids are prescribed by one prescriber only.</strong> If you already receive opioid medication from a pain management physician or your primary care doctor, contact that office for any additional prescriptions. Take a stool softener alongside. No driving, alcohol, or machinery.</p>
-                    <span class="dose">As prescribed &middot; shortest course possible &middot; add a stool softener</span></div></div>
-                <div class="rung t5"><div class="tier">5</div><div>
-                    <h4>Antibiotics &mdash; if prescribed</h4>
-                    <p>May be prescribed if you have risk factors for infection or signs of one. If prescribed, <strong>take the full course even if you are feeling better</strong> before it is finished.</p>
-                    <span class="dose">Complete the entire course</span></div></div>
-                <div class="rung t6"><div class="tier">6</div><div>
-                    <h4>Blood thinners &mdash; if prescribed</h4>
-                    <p>If a blood thinner was prescribed by another physician, continue exactly as that physician instructed. If you are prescribed aspirin after surgery, it is most likely to prevent blood clots and should be taken for the full duration recommended &mdash; after which you should resume whatever anticoagulation you were on previously.</p>
-                    <span class="dose">Never stop or start anticoagulation without speaking to the prescriber</span></div></div>
-            </div>
-            <div class="caution">
-                <h3>Before taking any of the above</h3>
-                <p>If you have <strong>kidney disease, liver disease, are on anticoagulation, or have had a recent stroke, heart attack, or cardiac stent</strong> &mdash; or any other major medical condition &mdash; check with your surgeon or primary care physician before starting or changing any of these medications. Doses here are general guidance for healthy adults and may not be safe for you.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section section-alt" id="faq">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <p class="section-intro">The questions we are asked most often after surgery.</p>
-            <div class="faq">
-                <div class="faq-item open"><button class="faq-q" type="button">When can I shower and get the wound wet? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p><strong>Soft dressing:</strong> keep it dry a minimum of 24&ndash;48 hours, then you may shower and wash the incision normally with soap and water. Blot dry and apply a clean, dry bandage.</p>
-                    <p><strong>Splint or cast:</strong> it stays on and stays dry until your surgeon removes it &mdash; cover it with a trash bag sealed with Press&rsquo;n Seal, or a waterproof sleeve.</p>
-                    <p><strong>Joint replacement:</strong> your dressing stays on at least one week and is normally removed by your surgeon at your post-op visit. If you cannot get to a post-op visit within the first two weeks, change it to a clean dry dressing yourself and keep the incision covered.</p>
-                    <p><strong>At one week:</strong> if your stitches are dissolvable and not visible on top of the skin, you may get the area wet and wash it lightly with soap and water. Hand incisions may be washed lightly at the one week mark.</p>
-                    <p><strong>In every case:</strong> never submerge the wound &mdash; no dishwashing, baths, pools, or hot tubs.</p></div></div>
-
-                <div class="faq-item"><button class="faq-q" type="button">I was given a sling. When can I stop wearing it? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p>If you were given a sling because you had a <strong>nerve block</strong> before surgery on your elbow, forearm, wrist, or hand, you may remove it once function returns to your hand and arm and you have regained control of the limb. The sling in that situation is protecting an arm you temporarily cannot feel or move.</p>
-                    <p>If you had <strong>shoulder surgery</strong>, sling use is dictated by the specific repair &mdash; please follow the post-operative instructions you were given rather than a general rule.</p></div></div>
-
-                <div class="faq-item"><button class="faq-q" type="button">Should I put ointment, cream, or vitamin E on the incision? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p>Not at first. Do not apply creams, lotions, salves, ointments, or powders to the wound before your first post-op visit unless specifically told to.</p>
-                    <p><strong>Cocoa butter and vitamin E</strong> may be applied once the wound has fully healed and the scabs have fallen off <em>on their own</em> &mdash; never pick them off.</p>
-                    <p><strong>Over-the-counter silicone cream or silicone tape</strong> may be used starting one month after surgery, or later if the scar is not yet fully healed.</p>
-                    <p>If you have any questions, or if your wound healing has been delayed, check with your provider at a post-operative visit before starting any of these products.</p></div></div>
-
-                <div class="faq-item"><button class="faq-q" type="button">Do my stitches need to be removed? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p><strong>Honey- or tan-coloured stitches</strong> are dissolvable and fall out on their own over a few weeks &mdash; leave them alone. <strong>Blue stitches or metal staples</strong> come out in the office, typically 10&ndash;14 days after surgery. If you are not sure which you have, we will tell you at your first visit.</p></div></div>
-
-                <div class="faq-item"><button class="faq-q" type="button">When can I drive? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p>Not while any of the following are true: you have a <strong>splint or sling on either arm</strong>; you are <strong>non-weight-bearing</strong> or have <strong>range of motion restrictions</strong> on the arm; or you are taking <strong>narcotic pain medication</strong>.</p>
-                    <p>Beyond those hard rules, you also need to be able to grip and turn the wheel confidently enough to make an emergency maneuver. If you have to think hard about whether you could swerve, you are not ready.</p></div></div>
-
-                <div class="faq-item"><button class="faq-q" type="button">When can I go back to work? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p>Lifting and weight-bearing through the operated arm depend on the type of surgery you had &mdash; follow the patient handout instructions you were given.</p>
-                    <p>You may return on <strong>light duty</strong> once you can perform your job tasks safely with one arm, or with both arms within the restrictions in your handout. After simpler procedures you may return as soon as you are deemed safe to do so.</p>
-                    <p>Expect the surgical area to get sore again once you start using it. Stay ahead of that rather than chasing it: rest it, ice it, and use acetaminophen or anti-inflammatories <em>before and after</em> your shift, not only once it hurts.</p>
-                    <p>When in doubt, describe your actual work tasks to your therapist and ask which ones are cleared. They can usually give you a far more specific answer than a general timeline.</p>
-                    <p><strong>Paperwork:</strong> fax it to the office ahead of time and call to let us know it is coming. Paperwork cannot be completed the day of an appointment without advance notice.</p></div></div>
-
-                <div class="faq-item"><button class="faq-q" type="button">How long will the incision stay sore? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p>Longer than most people expect, and that is normal &mdash; incision tenderness commonly lasts around four months. Palm incisions in particular develop firm scar thickening that feels alarming but softens steadily over several months. Dry skin, flaking, crusting, and scabbing along the incision are all normal parts of healing.</p></div></div>
-
-                <div class="faq-item"><button class="faq-q" type="button">When does hand therapy start? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p>Formal therapy usually begins at your first post-operative visit, but may start before that depending on which procedure you had. Some repairs need protected motion within days to prevent adhesions; others require weeks of immobilization before any motion is safe.</p>
-                    <p>Your specific protocol will be given to you and to your therapist. If your therapist has questions about it, have them call the office directly rather than guessing.</p></div></div>
-
-                <div class="faq-item"><button class="faq-q" type="button">Is it safe to travel or fly after surgery? <span class="chev"><i class="fas fa-chevron-down"></i></span></button>
-                    <div class="faq-a"><p>Flying is acceptable beginning <strong>24 hours after surgery</strong>. If you do travel, bring your <strong>operative report</strong> and your <strong>post-operative instructions</strong> with you. Keep the hand elevated where you can, stay hydrated, and get up and move periodically.</p></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Videos Section -->
-    <section class="section" id="videos">
-        <div class="container">
-            <h2 class="section-title">Educational Videos</h2>
-            <p class="section-intro">Patient education presentations and surgical technique demonstrations.</p>
-
-            <div class="video-grid" id="videoGrid">
-                <!-- Videos are loaded from videos.js - add YouTube embed IDs there -->
-                <div class="video-placeholder">
-                    <i class="fas fa-video"></i>
-                    <p>Video content coming soon. Add YouTube video IDs in <code>js/videos.js</code> to populate this section.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Beyond Medicine Section -->
-    <section class="section section-alt" id="beyond-medicine">
-        <div class="container">
-            <h2 class="section-title">Beyond Medicine</h2>
-            <div class="interests-content">
-                <p>Outside of the operating room, Dr. Oosten is passionate about:</p>
-                <div class="interests-grid">
-                    <div class="interest-card">
-                        <i class="fas fa-house-heart"></i>
-                        <h3>Family</h3>
-                        <p>A proud brother and uncle, Dr. Oosten cherishes family game nights, outdoor activities together, and workouts at the family-owned JACKEDNLEEN Gym.</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-dumbbell"></i>
-                        <h3>Fitness &amp; Nutrition</h3>
-                        <p>Dedicated to wellness through a combination of gym workouts, healthy meal preparation, and I even hosted a nutrition podcast in medical school.</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-mountain"></i>
-                        <h3>Travel &amp; Outdoors</h3>
-                        <p>Anywhere with hiking, skiing, or boating. Having grown up across Kansas City, Iowa, Michigan, New Jersey, and Minnesota &mdash; adventure is always calling.</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-table-tennis-paddle-ball"></i>
-                        <h3>Sports</h3>
-                        <p>Tennis, golf, pickleball, volleyball, softball, and spikeball &mdash; whether in rec leagues or with friends, competition keeps things fun.</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-music"></i>
-                        <h3>Concerts &amp; Festivals</h3>
-                        <p>Over 150 live artists seen spanning electronic, rock, pop, rap, and country. Music and community are a constant source of energy.</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-tools"></i>
-                        <h3>DIY &amp; Building</h3>
-                        <p>Furniture building, household repairs, and the occasional car fix. The same precision and problem-solving that drives surgery fuels hands-on projects.</p>
-                    </div>
-                    <div class="interest-card">
-                        <i class="fas fa-shoe-prints"></i>
-                        <h3>Dancing</h3>
-                        <p>From glory days on the University of Pittsburgh dance team to local swing, salsa, and bachata nights &mdash; always moving to the music.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Disclosures Section -->
+    <!-- Disclosures -->
     <section class="section" id="disclosures">
         <div class="container">
             <h2 class="section-title">Disclosures</h2>
@@ -682,42 +298,38 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="section section-alt" id="contact">
+    <!-- Professional Organizations — kept at the very bottom of the page -->
+    <section class="orgs" id="organizations">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:contact@jamesoostenmd.com">contact@jamesoostenmd.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-globe"></i>
-                        <div>
-                            <h3>Website</h3>
-                            <a href="https://jamesoostenmd.com">jamesoostenmd.com</a>
-                        </div>
-                    </div>
+            <p class="orgs-label">Member</p>
+            <h2>Professional Organizations</h2>
+            <div class="org-grid">
+                <div class="org-item">
+                    <span class="org-abbr">ASSH</span>
+                    <span class="org-name">American Society for Surgery of the Hand</span>
                 </div>
-                <div class="contact-social">
-                    <h3>Connect With Me</h3>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/james-oosten" target="_blank" rel="noopener" class="social-btn linkedin">
-                            <i class="fab fa-linkedin-in"></i> LinkedIn
-                        </a>
-                        <a href="https://www.instagram.com/jamesoosten" target="_blank" rel="noopener" class="social-btn instagram">
-                            <i class="fab fa-instagram"></i> Instagram
-                        </a>
-                        <a href="https://x.com/jamesoosten" target="_blank" rel="noopener" class="social-btn twitter">
-                            <i class="fab fa-x-twitter"></i> Twitter / X
-                        </a>
-                    </div>
+                <div class="org-item">
+                    <span class="org-abbr">AAHS</span>
+                    <span class="org-name">American Association for Hand Surgery</span>
+                </div>
+                <div class="org-item">
+                    <span class="org-abbr">AOA</span>
+                    <span class="org-name">American Orthopaedic Association</span>
+                </div>
+                <div class="org-item">
+                    <span class="org-abbr">ORS</span>
+                    <span class="org-name">Orthopaedic Research Society</span>
+                </div>
+                <div class="org-item">
+                    <span class="org-abbr">AOSSM</span>
+                    <span class="org-name">American Orthopaedic Society for Sports Medicine</span>
+                </div>
+                <div class="org-item">
+                    <span class="org-abbr">A&Omega;A</span>
+                    <span class="org-name">Alpha Omega Alpha Honor Medical Society</span>
                 </div>
             </div>
+            <p class="orgs-note">Resident and candidate memberships held during orthopaedic surgery residency.</p>
         </div>
     </section>
 
@@ -741,18 +353,16 @@
                     <a href="https://www.instagram.com/jamesoosten" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://x.com/jamesoosten" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
                 </div>
+                <!-- EMAIL PLACEHOLDER: uncomment when email is ready
+                <p class="footer-copyright"><a href="mailto:contact@jamesoostenmd.com">contact@jamesoostenmd.com</a></p>
+                -->
                 <p class="footer-copyright">&copy; <span id="currentYear"></span> James D. Oosten, MD. All rights reserved.</p>
                 <p class="footer-disclaimer">This website is for informational purposes only and does not constitute medical advice. Please consult with a qualified healthcare provider for diagnosis and treatment.</p>
             </div>
         </div>
     </footer>
 
-    <script src="js/resources.js"></script>
-    <script src="js/protocols.js"></script>
-    <script src="js/videos.js"></script>
     <script src="js/affiliations.js"></script>
-    <script src="js/site-extras.js"></script>
-    <script src="js/postop-navigator.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Patient education handouts, hand and shoulder therapy protocols, and educational videos from James D. Oosten, MD.">
+    <title>Patient Resources | James D. Oosten, MD</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-name">JAMES D. OOSTEN, MD</span>
+                <span class="logo-subtitle">ORTHOPAEDIC SURGERY &nbsp;|&nbsp; HAND &nbsp;|&nbsp; WRIST &nbsp;|&nbsp; FOREARM &nbsp;|&nbsp; ELBOW &nbsp;|&nbsp; SHOULDER</span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="about.html" class="nav-link">About &#9662;</a>
+                    <div class="dropdown-menu">
+                        <a href="about.html" class="dropdown-link">About Dr. Oosten</a>
+                        <a href="education.html" class="dropdown-link">Education &amp; Training</a>
+                        <a href="research.html" class="dropdown-link">Research &amp; Publications</a>
+                        <a href="about.html#beyond-medicine" class="dropdown-link">Beyond Medicine</a>
+                        <a href="index.html#disclosures" class="dropdown-link">Disclosures</a>
+                    </div>
+                </li>
+                <li class="nav-item-dropdown">
+                    <a href="patient-resources.html" class="nav-link active">Patient Care &#9662;</a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#conditions" class="dropdown-link">Conditions Treated</a>
+                        <a href="patient-resources.html" class="dropdown-link">Patient Education</a>
+                        <a href="patient-resources.html#protocols" class="dropdown-link">Therapy Protocols</a>
+                        <a href="patient-resources.html#videos" class="dropdown-link">Educational Videos</a>
+                        <a href="postop.html" class="dropdown-link">Post-Operative Care</a>
+                        <a href="faq.html" class="dropdown-link">FAQ</a>
+                        <a href="prepare.html" class="dropdown-link">Preparing for Your Visit</a>
+                        <a href="index.html#locations" class="dropdown-link">Locations</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <span class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Patient Resources</span>
+        <h1>Patient Resources</h1>
+        <p>Education handouts, therapy protocols, and videos to support you before and after surgery.</p>
+    </header>
+
+    <!-- Patient Education -->
+    <section class="section" id="resources">
+        <div class="container">
+            <h2 class="section-title">Patient Education</h2>
+            <p class="section-intro">Educational materials to help you understand your condition, treatment options, and what to expect before and after surgery.</p>
+
+            <div class="resource-filter">
+                <button class="filter-btn active" data-filter="all">All Topics</button>
+                <button class="filter-btn" data-filter="shoulder"><i class="fas fa-person-walking"></i> Shoulder</button>
+                <button class="filter-btn" data-filter="hand"><i class="fas fa-hand"></i> Hand &amp; Fingers</button>
+                <button class="filter-btn" data-filter="wrist"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M9 2 Q8.5 9 9.5 13"/><path d="M15 2 Q15.5 9 14.5 13"/><line x1="7" y1="13" x2="17" y2="13"/><rect x="7" y="14.5" width="4" height="3" rx="1"/><rect x="13" y="14.5" width="4" height="3" rx="1"/><rect x="7" y="18.5" width="4" height="3" rx="1"/><rect x="13" y="18.5" width="4" height="3" rx="1"/></svg></span> Forearm &amp; Wrist</button>
+                <button class="filter-btn" data-filter="elbow"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2 L12 12"/><circle cx="12" cy="14" r="3.5"/><path d="M14.8 16.4 L21 20"/></svg></span> Elbow</button>
+                <button class="filter-btn" data-filter="nerve"><i class="fas fa-microscope"></i> Nerve</button>
+            </div>
+
+            <div class="resources-grid" id="resourcesGrid">
+                <!-- Loaded dynamically from js/resources.js -->
+            </div>
+
+            <p class="resources-note"><em>These materials are for educational purposes and supplement, but do not replace, the personalized guidance from your surgeon and therapy team.</em></p>
+        </div>
+    </section>
+
+    <!-- Therapy Protocols -->
+    <section class="section section-alt" id="protocols">
+        <div class="container">
+            <h2 class="section-title">Therapy Protocols</h2>
+            <p class="section-intro">Post-operative rehabilitation protocols and non-operative exercise programs for your physical or hand therapist.</p>
+
+            <div class="resource-filter">
+                <button class="filter-btn active" data-filter="all" data-target="protocolsGrid">All Protocols</button>
+                <button class="filter-btn" data-filter="shoulder-proto" data-target="protocolsGrid"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M8 21 Q4 13 8 5"/><circle cx="15" cy="13" r="6"/><line x1="15" y1="19" x2="15" y2="24"/></svg></span> Shoulder</button>
+                <button class="filter-btn" data-filter="elbow-proto" data-target="protocolsGrid"><span class="filter-icon-svg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><path d="M12 2 L12 12"/><circle cx="12" cy="14" r="3.5"/><path d="M14.8 16.4 L21 20"/></svg></span> Elbow</button>
+                <button class="filter-btn" data-filter="hand-proto" data-target="protocolsGrid"><i class="fas fa-hand"></i> Hand, Forearm &amp; Wrist</button>
+                <button class="filter-btn" data-filter="nonop" data-target="protocolsGrid"><i class="fas fa-leaf"></i> Non-Operative Programs</button>
+            </div>
+
+            <div class="resources-grid" id="protocolsGrid">
+                <!-- Loaded dynamically from js/protocols.js -->
+            </div>
+
+            <p class="resources-note"><em>These protocols are intended solely for patients under the care of Dr. Oosten. They supplement, but do not replace, individualized guidance from your surgeon and therapist.</em></p>
+        </div>
+    </section>
+
+    <!-- Educational Videos -->
+    <section class="section" id="videos">
+        <div class="container">
+            <h2 class="section-title">Educational Videos</h2>
+            <p class="section-intro">Patient education presentations and surgical technique demonstrations.</p>
+
+            <div class="video-grid" id="videoGrid">
+                <!-- Videos are loaded from js/videos.js - add YouTube embed IDs there -->
+                <div class="video-placeholder">
+                    <i class="fas fa-video"></i>
+                    <p>Video content coming soon. Add YouTube video IDs in <code>js/videos.js</code> to populate this section.</p>
+                </div>
+            </div>
+
+            <p class="resources-disclaimer"><strong>Disclaimer:</strong> The documents and rehabilitation information provided on this website are intended solely for patients currently under the care of Dr. Oosten. This content is meant to complement, not replace, professional medical advice, diagnosis, or treatment. As always, seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition or treatment. Do not disregard or delay professional medical advice based on information from this website.</p>
+        </div>
+    </section>
+
+    <div class="page-back">
+        <a href="index.html"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    <!-- Affiliation Ticker -->
+    <div class="ticker">
+        <div class="ticker-inner">
+            <div class="ticker-tag">Affiliations</div>
+            <div class="ticker-view"><div class="ticker-track" id="tickerTrack"></div></div>
+        </div>
+    </div>
+    <p class="ticker-legend"><span class="star">&lowast;</span> Resident member</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-name">James D. Oosten, MD</p>
+                <p class="footer-specialty">Upper Extremity Orthopaedic Surgery</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/james-oosten" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/jamesoosten" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/jamesoosten" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fab fa-x-twitter"></i></a>
+                </div>
+                <!-- EMAIL PLACEHOLDER: uncomment when email is ready
+                <p class="footer-copyright"><a href="mailto:contact@jamesoostenmd.com">contact@jamesoostenmd.com</a></p>
+                -->
+                <p class="footer-copyright">&copy; <span id="currentYear"></span> James D. Oosten, MD. All rights reserved.</p>
+                <p class="footer-disclaimer">This website is for informational purposes only and does not constitute medical advice. Please consult with a qualified healthcare provider for diagnosis and treatment.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/resources.js"></script>
+    <script src="js/protocols.js"></script>
+    <script src="js/videos.js"></script>
+    <script src="js/affiliations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

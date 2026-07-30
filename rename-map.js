@@ -1,0 +1,57 @@
+// Old filename -> New filename mapping (renamed protocols)
+// Files NOT in this map that are in orphans list will be KEPT
+const RENAMES = {
+  // Shoulder
+  "Shoulder-AC-Joint-Reconstruction.docx": "Shoulder-Acromioclavicular-AC-Joint-Reconstruction.docx",
+  "Shoulder-Bankart-Repair.docx": "Shoulder-Anterior-Shoulder-Stabilization-Bankart-Repair.docx",
+  "Shoulder-Clavicle-ORIF-Distal.docx": "Shoulder-Distal-Clavicle-ORIF.docx",
+  "Shoulder-Clavicle-ORIF-Midshaft.docx": "Shoulder-Midshaft-Clavicle-ORIF.docx",
+  "Shoulder-Latarjet.docx": "Shoulder-Coracoid-Transfer-Latarjet.docx",
+  "Shoulder-Lower-Trap-Transfer.docx": "Shoulder-Lower-Trapezius-Tendon-Transfer.docx",
+  "Shoulder-MDI-Repair.docx": "Shoulder-Multidirectional-Instability-MDI-Repair.docx",
+  "Shoulder-Massive-RCR.docx": "Shoulder-Massive-Rotator-Cuff-Repair.docx",
+  "Shoulder-Pec-Major-Repair.docx": "Shoulder-Pectoralis-Major-Tendon-Repair.docx",
+  "Shoulder-Posterior-Stabilization.docx": "Shoulder-Posterior-Shoulder-Stabilization.docx",
+  "Shoulder-RCR-Biceps-Tenodesis.docx": "Shoulder-Rotator-Cuff-Repair-With-Biceps-Tenodesis.docx",
+  "Shoulder-RCR-Subscap.docx": "Shoulder-Rotator-Cuff-Repair-With-Subscapularis-Repair.docx",
+  "Shoulder-Reverse-TSA-Standard.docx": "Shoulder-Reverse-Total-Shoulder-Arthroplasty.docx",
+  "Shoulder-SC-Joint-Reconstruction.docx": "Shoulder-Sternoclavicular-SC-Joint-Reconstruction.docx",
+  "Shoulder-SLAP-Repair.docx": "Shoulder-Superior-Labrum-SLAP-Repair.docx",
+  "Shoulder-Total-Arthroplasty.docx": "Shoulder-Anatomic-Total-Shoulder-Arthroplasty.docx",
+  // Elbow
+  "Elbow-Distal-Biceps-Repair.docx": "Elbow-Distal-Biceps-Tendon-Repair.docx",
+  "Elbow-Epicondylitis-Debridement.docx": "Elbow-Lateral-Medial-Epicondylitis-Debridement.docx",
+  "Elbow-Epicondylitis-Repair.docx": "Elbow-Lateral-Medial-Epicondylitis-Repair.docx",
+  "Elbow-LUCL-Reconstruction.docx": "Elbow-Lateral-Ulnar-Collateral-Ligament-LUCL-Reconstruction.docx",
+  "Elbow-Throwing-Program-Phase1.docx": "Elbow-Interval-Throwing-Program-Phase-I.docx",
+  "Elbow-Throwing-Program-Phase2.docx": "Elbow-Interval-Throwing-Program-Phase-II-Mound.docx",
+  "Elbow-Triceps-Repair.docx": "Elbow-Triceps-Tendon-Repair.docx",
+  "Elbow-UCL-Conservative.docx": "NonOp-Elbow-UCL-Conservative-Treatment.docx",
+  "Elbow-UCL-Reconstruction.docx": "Elbow-Ulnar-Collateral-Ligament-UCL-Reconstruction.docx",
+  "Elbow-UCL-Repair.docx": "Elbow-Ulnar-Collateral-Ligament-UCL-Repair.docx",
+  // Hand
+  "Hand-Carpal-Tunnel-Release-Protocol.docx": "Hand-Carpal-Tunnel-Release.docx",
+  "Hand-Cubital-Tunnel-Release-Protocol.docx": "Hand-Cubital-Tunnel-Release.docx",
+  "Hand-DeQuervains-Release-Protocol.docx": "Hand-De-Quervains-Release.docx",
+  "Hand-Dupuytrens-Fasciectomy-Protocol.docx": "Hand-Dupuytrens-Fasciectomy.docx",
+  "Hand-Extensor-Tendon-Repair-Protocol.docx": "Hand-Extensor-Tendon-Repair.docx",
+  "Hand-Flexor-Tendon-Repair-Protocol.docx": "Hand-Flexor-Tendon-Repair-Direct-Primary-Repair.docx",
+  "Hand-Tendon-Transfer-Median-Nerve.docx": "Hand-Tendon-Transfer-For-Low-Median-Nerve-Palsy.docx",
+  "Hand-Tendon-Transfer-Radial-Nerve.docx": "Hand-Tendon-Transfer-For-Radial-Nerve-Palsy.docx",
+  "Hand-Tendon-Transfer-Ulnar-Nerve.docx": "Hand-Tendon-Transfer-For-Low-Ulnar-Nerve-Palsy.docx",
+  "Hand-Thumb-CMC-Arthroplasty-Protocol.docx": "Hand-Thumb-CMC-Arthroplasty-LRTI.docx",
+  "Hand-Trigger-Finger-Release-Protocol.docx": "Hand-Trigger-Finger-Release.docx",
+  // Wrist
+  "Wrist-Distal-Radius-ORIF-Protocol.docx": "Wrist-Distal-Radius-Fracture-ORIF.docx",
+  "Wrist-Fusion-Protocol.docx": "Wrist-Fusion.docx",
+  "Wrist-Scaphoid-Fixation-Protocol.docx": "Wrist-Scaphoid-Fracture-Fixation.docx",
+  "Wrist-TFCC-Repair-Protocol.docx": "Wrist-TFCC-Repair.docx",
+  // NonOp
+  "NonOp-Elbow-Stiffness-Home.docx": "NonOp-Elbow-Stiffness.docx",
+  "NonOp-Frozen-Shoulder.docx": "NonOp-Shoulder-Stiffness-Frozen-Shoulder.docx",
+  "NonOp-Nerve-Gliding-Carpal-Tunnel.docx": "NonOp-Carpal-Tunnel-Nerve-Gliding.docx",
+  "NonOp-Nerve-Gliding-Cubital-Tunnel.docx": "NonOp-Cubital-Tunnel-Nerve-Gliding.docx",
+  "NonOp-Shoulder-Impingement.docx": "NonOp-Shoulder-Impingement-Rotator-Cuff-Tendonitis.docx",
+  "NonOp-Ulnar-Wrist-Pain.docx": "NonOp-Ulnar-Sided-Wrist-Pain.docx",
+};
+module.exports = RENAMES;
