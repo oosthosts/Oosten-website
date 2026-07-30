@@ -1640,17 +1640,43 @@ ul {
    ========================================================================== */
 
 /* ---------- interior page banner (sits under the fixed navbar) ---------- */
-.page-hero{background:linear-gradient(135deg,var(--color-primary-dark) 0%,var(--color-primary) 60%,var(--color-accent) 100%);padding:140px 24px 56px;text-align:center;position:relative}
-.page-hero h1{font-family:var(--font-heading);font-size:2.6rem;font-weight:700;color:#fff;line-height:1.2}
-.page-hero h1::after{content:"";display:block;width:70px;height:3px;background:var(--color-gold);margin:16px auto 0;border-radius:2px}
-.page-hero p{color:rgba(255,255,255,.8);max-width:720px;margin:18px auto 0;font-size:1.03rem}
-.page-hero .crumb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--color-gold);margin-bottom:10px;display:block}
+/* Kept deliberately shallow — the navbar already eats 80px, so a tall banner
+   pushes the actual page content below the fold. */
+.page-hero{background:linear-gradient(135deg,var(--color-primary-dark) 0%,var(--color-primary) 60%,var(--color-accent) 100%);padding:112px 24px 38px;text-align:center;position:relative}
+.page-hero h1{font-family:var(--font-heading);font-size:2.3rem;font-weight:700;color:#fff;line-height:1.2}
+.page-hero h1::after{content:"";display:block;width:70px;height:3px;background:var(--color-gold);margin:12px auto 0;border-radius:2px}
+.page-hero p{color:rgba(255,255,255,.8);max-width:720px;margin:14px auto 0;font-size:1rem}
+.page-hero .crumb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--color-gold);margin-bottom:8px;display:block}
 .page-hero .crumb a{color:var(--color-gold);opacity:.85}
 .page-hero .crumb a:hover{opacity:1;color:var(--color-gold)}
 @media(max-width:768px){
-  .page-hero{padding:104px 20px 40px}
-  .page-hero h1{font-size:1.85rem}
-  .page-hero p{font-size:.94rem}
+  .page-hero{padding:88px 20px 30px}
+  .page-hero h1{font-size:1.7rem}
+  .page-hero p{font-size:.92rem}
+}
+
+/* Split banner: copy on the left, portrait on the right (about page).
+   The photo — not the text — sets the banner height here, so it is kept
+   deliberately small and the padding tighter than the text-only banner,
+   otherwise adding a portrait makes this hero taller than every other page. */
+.page-hero-split{text-align:left;padding-top:96px;padding-bottom:28px}
+.page-hero-inner{max-width:var(--max-width);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:44px}
+.page-hero-text{flex:1;min-width:0}
+.page-hero-split h1::after{margin-left:0;margin-right:0}
+.page-hero-split p{margin-left:0;margin-right:0}
+.page-hero-photo{flex-shrink:0}
+.page-hero-photo img{width:176px;height:220px;object-fit:cover;border-radius:var(--radius-lg);border:3px solid var(--color-gold);box-shadow:0 0 0 6px rgba(201,168,76,.15),var(--shadow-xl);background:var(--color-bg-alt)}
+.page-hero-photo .photo-caption{display:block;text-align:center;margin-top:8px;color:rgba(255,255,255,.65);font-size:.72rem}
+@media(max-width:900px){
+  .page-hero-photo img{width:150px;height:188px}
+  .page-hero-inner{gap:28px}
+}
+@media(max-width:768px){
+  .page-hero-split{text-align:center;padding-top:80px;padding-bottom:26px}
+  .page-hero-inner{flex-direction:column-reverse;gap:20px}
+  .page-hero-split h1::after{margin-left:auto;margin-right:auto}
+  .page-hero-split p{margin-left:auto;margin-right:auto}
+  .page-hero-photo img{width:150px;height:188px}
 }
 
 /* ---------- home page section cards (styled like the patient-care grid) ---------- */
@@ -1702,13 +1728,32 @@ ul {
 .photo-body h4{font-size:.94rem;font-family:var(--font-body);font-weight:700;color:var(--color-primary);margin-bottom:3px}
 .photo-caption{display:block;font-size:.78rem;color:var(--color-text-light)}
 
+/* ---------- philosophy of care, with side image ---------- */
+.philosophy-split{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:42px;align-items:center;max-width:980px;margin:40px auto 48px}
+.philosophy-split .philosophy-quote{margin:0;text-align:left}
+.philosophy-split .philosophy-quote i{margin-bottom:12px}
+.philosophy-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius-md);border:1px solid var(--color-border);box-shadow:var(--shadow-sm);background:var(--color-bg-alt)}
+.philosophy-media .photo-caption{display:block;text-align:center;margin-top:9px}
+@media(max-width:768px){
+  .philosophy-split{grid-template-columns:1fr;gap:26px;margin:30px auto 38px}
+  .philosophy-split .philosophy-quote{text-align:center}
+  .philosophy-media{max-width:260px;margin:0 auto}
+}
+
 /* ---------- instagram embed row ---------- */
 .ig-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;max-width:1000px;margin:0 auto 20px}
 .ig-head h3{font-family:var(--font-heading);font-size:1.25rem;color:var(--color-primary);display:flex;align-items:center;gap:10px;margin:0}
 .ig-head h3 i{color:#cc2366}
-.ig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.ig-cell{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden;min-height:420px}
+.ig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.ig-cell{background:#fff;border:1px solid var(--color-border);border-radius:var(--radius-md);overflow:hidden}
+/* Real embeds, once shortcodes are filled in */
 .ig-cell iframe{width:100%;height:480px;border:0;display:block}
+/* Placeholder tile shown until a real post shortcode is supplied */
+.ig-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;aspect-ratio:1/1;border:1px dashed var(--color-border);color:var(--color-text-light);text-decoration:none;transition:all var(--transition)}
+.ig-placeholder:hover{border-color:#cc2366;color:#cc2366;box-shadow:var(--shadow-sm)}
+.ig-placeholder i{font-size:2.1rem;color:#cc2366;opacity:.75}
+.ig-placeholder span{font-size:.85rem;font-weight:500}
+.ig-placeholder small{font-size:.72rem;opacity:.8}
 @media(max-width:768px){.ig-cell iframe{height:440px}}
 
 /* ---------- scheduling / contact cards (prepare page) ---------- */

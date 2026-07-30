@@ -38,23 +38,34 @@
                     <a href="patient-resources.html" class="nav-link">Patient Care &#9662;</a>
                     <div class="dropdown-menu">
                         <a href="index.html#conditions" class="dropdown-link">Conditions Treated</a>
+                        <a href="contact.html" class="dropdown-link">Contact or Book Appointment</a>
+                        <a href="prepare.html" class="dropdown-link">Preparing for Your Visit</a>
                         <a href="patient-resources.html" class="dropdown-link">Patient Education</a>
                         <a href="patient-resources.html#protocols" class="dropdown-link">Therapy Protocols</a>
-                        <a href="patient-resources.html#videos" class="dropdown-link">Educational Videos</a>
                         <a href="postop.html" class="dropdown-link">Post-Operative Care</a>
                         <a href="faq.html" class="dropdown-link">FAQ</a>
-                        <a href="prepare.html" class="dropdown-link">Preparing for Your Visit</a>
-                        <a href="index.html#locations" class="dropdown-link">Locations</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <header class="page-hero">
-        <span class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About</span>
-        <h1>About Dr. Oosten</h1>
-        <p>An engineer&rsquo;s approach to the upper extremity, shaped by a lifetime as both patient and surgeon.</p>
+    <header class="page-hero page-hero-split">
+        <div class="page-hero-inner">
+            <div class="page-hero-text">
+                <span class="crumb"><a href="index.html">Home</a> &nbsp;/&nbsp; About</span>
+                <h1>About Dr. Oosten</h1>
+                <p>An engineer&rsquo;s approach to the upper extremity, shaped by a lifetime as both patient and surgeon.</p>
+            </div>
+            <!-- TODO: Add portrait. Replace the src below with the path in data-photo
+                 (e.g. src="images/about-portrait.jpg"). Portrait orientation, roughly
+                 4:5, crops to 230x288 on desktop. -->
+            <div class="page-hero-photo">
+                <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect width='400' height='500' fill='%231f4468'/%3E%3Ctext x='200' y='253' font-family='Inter,sans-serif' font-size='19' fill='%23ffffff' fill-opacity='0.55' text-anchor='middle'%3EPhoto coming soon%3C/text%3E%3C/svg%3E"
+                     data-photo="images/about-portrait.jpg" alt="Photo coming soon — Dr. James D. Oosten">
+                <em class="photo-caption">Dr. James D. Oosten, MD</em>
+            </div>
+        </div>
     </header>
 
     <!-- Biography -->
@@ -86,9 +97,18 @@
         <div class="container">
             <h2 class="section-title">Philosophy of Care</h2>
             <div class="philosophy-content">
-                <div class="philosophy-quote">
-                    <i class="fas fa-quote-left"></i>
-                    <p>Every patient deserves a surgeon who listens carefully, explains thoroughly, and partners with them in their recovery.</p>
+                <div class="philosophy-split">
+                    <!-- TODO: Add photo. Replace the src below with the path in data-photo
+                         (e.g. src="images/philosophy.jpg"). Portrait/4:5 crop. -->
+                    <div class="philosophy-media">
+                        <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect width='400' height='500' fill='%23eef1f5'/%3E%3Ctext x='200' y='253' font-family='Inter,sans-serif' font-size='17' fill='%236c7a89' text-anchor='middle'%3EPhoto coming soon%3C/text%3E%3C/svg%3E"
+                             data-photo="images/philosophy.jpg" alt="Photo coming soon">
+                        <em class="photo-caption">Location &middot; Year</em>
+                    </div>
+                    <div class="philosophy-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Every patient deserves a surgeon who listens carefully, explains thoroughly, and partners with them in their recovery.</p>
+                    </div>
                 </div>
                 <div class="philosophy-pillars">
                     <div class="pillar">
@@ -229,23 +249,38 @@
                 </a>
             </div>
 
-            <!-- TODO: Instagram does not offer a public "latest 4 posts" embed without
-                 an API token. Replace POST_SHORTCODE_1..4 below with the shortcode from
-                 each post URL (https://www.instagram.com/p/<SHORTCODE>/) to pin the four
-                 posts you want shown. Swap them out whenever you want to refresh the row. -->
+            <!-- Instagram has no public "latest 4 posts" embed without an API token, so
+                 posts must be pinned individually by shortcode. Placeholder tiles are used
+                 here because a real <iframe> pointed at a non-existent shortcode renders
+                 Instagram's own "link may be broken" error card, which looks like a bug.
+
+                 TO ADD A POST: open the post, copy the shortcode from its URL
+                 (https://www.instagram.com/p/<SHORTCODE>/), and replace one <a> tile below
+                 with:
+                 <div class="ig-cell">
+                     <iframe src="https://www.instagram.com/p/<SHORTCODE>/embed/" title="Instagram post" loading="lazy" scrolling="no" frameborder="0"></iframe>
+                 </div>                                                                  -->
             <div class="ig-grid">
-                <div class="ig-cell">
-                    <iframe src="https://www.instagram.com/p/POST_SHORTCODE_1/embed/" title="Instagram post 1" loading="lazy" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
-                </div>
-                <div class="ig-cell">
-                    <iframe src="https://www.instagram.com/p/POST_SHORTCODE_2/embed/" title="Instagram post 2" loading="lazy" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
-                </div>
-                <div class="ig-cell">
-                    <iframe src="https://www.instagram.com/p/POST_SHORTCODE_3/embed/" title="Instagram post 3" loading="lazy" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
-                </div>
-                <div class="ig-cell">
-                    <iframe src="https://www.instagram.com/p/POST_SHORTCODE_4/embed/" title="Instagram post 4" loading="lazy" allowtransparency="true" scrolling="no" frameborder="0"></iframe>
-                </div>
+                <a class="ig-cell ig-placeholder" href="https://www.instagram.com/jamesoosten" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                    <span>Post coming soon</span>
+                    <small>View profile &rarr;</small>
+                </a>
+                <a class="ig-cell ig-placeholder" href="https://www.instagram.com/jamesoosten" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                    <span>Post coming soon</span>
+                    <small>View profile &rarr;</small>
+                </a>
+                <a class="ig-cell ig-placeholder" href="https://www.instagram.com/jamesoosten" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                    <span>Post coming soon</span>
+                    <small>View profile &rarr;</small>
+                </a>
+                <a class="ig-cell ig-placeholder" href="https://www.instagram.com/jamesoosten" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                    <span>Post coming soon</span>
+                    <small>View profile &rarr;</small>
+                </a>
             </div>
         </div>
     </section>
